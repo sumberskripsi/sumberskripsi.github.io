@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html lang="id" prefix="og: https://ogp.me/ns#">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kumpulan Soal Implementasi Stuktur Data - BELAJAR</title>
+    <meta name="description" content="Kumpulan Soal Implementasi Stuktur Data, , , , , , , 0, , , , , , 0, kumpulan-soal-implementasi-stuktur-data, BELAJAR" />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Kumpulan Soal Implementasi Stuktur Data - BELAJAR" />
+    <meta property="og:description" content="Kumpulan Soal Implementasi Stuktur Data, , , , , , , 0, , , , , , 0, kumpulan-soal-implementasi-stuktur-data, BELAJAR" />
+    <meta property="og:site_name" content="BELAJAR" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Kumpulan Soal Implementasi Stuktur Data - BELAJAR" />
+    <meta name="twitter:description" content="Kumpulan Soal Implementasi Stuktur Data, , , , , , , 0, , , , , , 0, kumpulan-soal-implementasi-stuktur-data, BELAJAR" />
+    <link rel='stylesheet' id='generate-style-css' href='https://sumberskripsi.github.io/css/main.min.css'?ver=3.2.4'
+        media='all' />
+    <link rel='stylesheet' id='ez-toc-css' href='https://sumberskripsi.github.io/css/screen.min.css'?ver=2.0.40' media='all' />
+    <style id='generate-style-inline-css'>
+        body {
+            background-color: #f7f7f7;
+            color: #222222;
+        }
+
+        a {
+            color: #1e73be;
+        }
+
+        a:hover,
+        a:focus,
+        a:active {
+            color: #000000;
+        }
+
+        .wp-block-group__inner-container {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .generate-back-to-top {
+            font-size: 20px;
+            border-radius: 3px;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            line-height: 40px;
+            width: 40px;
+            text-align: center;
+            z-index: 10;
+            transition: opacity 300ms ease-in-out;
+            opacity: 0.1;
+            transform: translateY(1000px);
+        }
+
+        .generate-back-to-top__show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .navigation-search {
+            position: absolute;
+            left: -99999px;
+            pointer-events: none;
+            visibility: hidden;
+            z-index: 20;
+            width: 100%;
+            top: 0;
+            transition: opacity 100ms ease-in-out;
+            opacity: 0;
+        }
+
+        .navigation-search.nav-search-active {
+            left: 0;
+            right: 0;
+            pointer-events: auto;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .navigation-search input[type="search"] {
+            outline: 0;
+            border: 0;
+            vertical-align: bottom;
+            line-height: 1;
+            opacity: 0.9;
+            width: 100%;
+            z-index: 20;
+            border-radius: 0;
+            -webkit-appearance: none;
+            height: 60px;
+        }
+
+        .navigation-search input::-ms-clear {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-ms-reveal {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-webkit-search-decoration,
+        .navigation-search input::-webkit-search-cancel-button,
+        .navigation-search input::-webkit-search-results-button,
+        .navigation-search input::-webkit-search-results-decoration {
+            display: none;
+        }
+
+        .gen-sidebar-nav .navigation-search {
+            top: auto;
+            bottom: 0;
+        }
+
+        :root {
+            --contrast: #222222;
+            --contrast-2: #575760;
+            --contrast-3: #b2b2be;
+            --base: #f0f0f0;
+            --base-2: #f7f8f9;
+            --base-3: #ffffff;
+            --accent: #1e73be;
+        }
+
+        .has-contrast-color {
+            color: var(--contrast);
+        }
+
+        .has-contrast-background-color {
+            background-color: var(--contrast);
+        }
+
+        .has-contrast-2-color {
+            color: var(--contrast-2);
+        }
+
+        .has-contrast-2-background-color {
+            background-color: var(--contrast-2);
+        }
+
+        .has-contrast-3-color {
+            color: var(--contrast-3);
+        }
+
+        .has-contrast-3-background-color {
+            background-color: var(--contrast-3);
+        }
+
+        .has-base-color {
+            color: var(--base);
+        }
+
+        .has-base-background-color {
+            background-color: var(--base);
+        }
+
+        .has-base-2-color {
+            color: var(--base-2);
+        }
+
+        .has-base-2-background-color {
+            background-color: var(--base-2);
+        }
+
+        .has-base-3-color {
+            color: var(--base-3);
+        }
+
+        .has-base-3-background-color {
+            background-color: var(--base-3);
+        }
+
+        .has-accent-color {
+            color: var(--accent);
+        }
+
+        .has-accent-background-color {
+            background-color: var(--accent);
+        }
+
+        body,
+        button,
+        input,
+        select,
+        textarea {
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+
+        body {
+            line-height: 1.5;
+        }
+
+        .entry-content>[class*="wp-block-"]:not(:last-child) {
+            margin-bottom: 1.5em;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            font-size: 14px;
+        }
+
+        .sidebar .widget,
+        .footer-widgets .widget {
+            font-size: 17px;
+        }
+
+        @media (max-width:768px) {
+            h1 {
+                font-size: 31px;
+            }
+
+            h2 {
+                font-size: 27px;
+            }
+
+            h3 {
+                font-size: 24px;
+            }
+
+            h4 {
+                font-size: 22px;
+            }
+
+            h5 {
+                font-size: 19px;
+            }
+        }
+
+        .top-bar {
+            background-color: #636363;
+            color: #ffffff;
+        }
+
+        .top-bar a {
+            color: #ffffff;
+        }
+
+        .top-bar a:hover {
+            color: #303030;
+        }
+
+        .site-header {
+            background-color: #ffffff;
+        }
+
+        .main-title a,
+        .main-title a:hover {
+            color: #222222;
+        }
+
+        .site-description {
+            color: #757575;
+        }
+
+        .main-navigation,
+        .main-navigation ul ul {
+            background-color: #ed4250;
+        }
+
+        .main-navigation .main-nav ul li a,
+        .main-navigation .menu-toggle,
+        .main-navigation .menu-bar-items {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul li.sfHover:not([class*="current-menu-"])>a,
+        .main-navigation .menu-bar-item:hover>a,
+        .main-navigation .menu-bar-item.sfHover>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        button.menu-toggle:hover,
+        button.menu-toggle:focus {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li[class*="current-menu-"]>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .navigation-search input[type="search"],
+        .navigation-search input[type="search"]:active,
+        .navigation-search input[type="search"]:focus,
+        .main-navigation .main-nav ul li.search-item.active>a,
+        .main-navigation .menu-bar-items .search-item.active>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation ul ul {
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul ul li.sfHover:not([class*="current-menu-"])>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li[class*="current-menu-"]>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .separate-containers .inside-article,
+        .separate-containers .comments-area,
+        .separate-containers .page-header,
+        .one-container .container,
+        .separate-containers .paging-navigation,
+        .inside-page-header {
+            background-color: #ffffff;
+        }
+
+        .entry-title a {
+            color: #222222;
+        }
+
+        .entry-title a:hover {
+            color: #55555e;
+        }
+
+        .entry-meta {
+            color: #595959;
+        }
+
+        .sidebar .widget {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets .widget-title {
+            color: #000000;
+        }
+
+        .site-info {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        .site-info a {
+            color: #ffffff;
+        }
+
+        .site-info a:hover {
+            color: #d3d3d3;
+        }
+
+        .footer-bar .widget_nav_menu .current-menu-item a {
+            color: #d3d3d3;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="url"],
+        input[type="password"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="number"],
+        textarea,
+        select {
+            color: #666666;
+            background-color: #fafafa;
+            border-color: #cccccc;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="url"]:focus,
+        input[type="password"]:focus,
+        input[type="search"]:focus,
+        input[type="tel"]:focus,
+        input[type="number"]:focus,
+        textarea:focus,
+        select:focus {
+            color: #666666;
+            background-color: #ffffff;
+            border-color: #bfbfbf;
+        }
+
+        button,
+        html input[type="button"],
+        input[type="reset"],
+        input[type="submit"],
+        a.button,
+        a.wp-block-button__link:not(.has-background) {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        button:hover,
+        html input[type="button"]:hover,
+        input[type="reset"]:hover,
+        input[type="submit"]:hover,
+        a.button:hover,
+        button:focus,
+        html input[type="button"]:focus,
+        input[type="reset"]:focus,
+        input[type="submit"]:focus,
+        a.button:focus,
+        a.wp-block-button__link:not(.has-background):active,
+        a.wp-block-button__link:not(.has-background):focus,
+        a.wp-block-button__link:not(.has-background):hover {
+            color: #ffffff;
+            background-color: #3f4047;
+        }
+
+        a.generate-back-to-top {
+            background-color: rgba(0, 0, 0, 0.4);
+            color: #ffffff;
+        }
+
+        a.generate-back-to-top:hover,
+        a.generate-back-to-top:focus {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #ffffff;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-bar-item:hover>a,
+            .main-navigation .menu-bar-item.sfHover>a {
+                background: none;
+                color: #ffffff;
+            }
+        }
+
+        .nav-below-header .main-navigation .inside-navigation.grid-container,
+        .nav-above-header .main-navigation .inside-navigation.grid-container {
+            padding: 0px 20px 0px 20px;
+        }
+
+        .site-main .wp-block-group__inner-container {
+            padding: 40px;
+        }
+
+        .separate-containers .paging-navigation {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .entry-content .alignwide,
+        body:not(.no-sidebar) .entry-content .alignfull {
+            margin-left: -40px;
+            width: calc(100% + 80px);
+            max-width: calc(100% + 80px);
+        }
+
+        .rtl .menu-item-has-children .dropdown-menu-toggle {
+            padding-left: 20px;
+        }
+
+        .rtl .main-navigation .main-nav ul li.menu-item-has-children>a {
+            padding-right: 20px;
+        }
+
+        @media (max-width:768px) {
+
+            .separate-containers .inside-article,
+            .separate-containers .comments-area,
+            .separate-containers .page-header,
+            .separate-containers .paging-navigation,
+            .one-container .site-content,
+            .inside-page-header {
+                padding: 30px;
+            }
+
+            .site-main .wp-block-group__inner-container {
+                padding: 30px;
+            }
+
+            .inside-top-bar {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-header {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .widget-area .widget {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .footer-widgets-container {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-site-info {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .entry-content .alignwide,
+            body:not(.no-sidebar) .entry-content .alignfull {
+                margin-left: -30px;
+                width: calc(100% + 60px);
+                max-width: calc(100% + 60px);
+            }
+
+            .one-container .site-main .paging-navigation {
+                margin-bottom: 20px;
+            }
+        }
+
+        /* End cached CSS */
+        .is-right-sidebar {
+            width: 30%;
+        }
+
+        .is-left-sidebar {
+            width: 30%;
+        }
+
+        .site-content .content-area {
+            width: 70%;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-toggle,
+            .sidebar-nav-mobile:not(#sticky-placeholder) {
+                display: block;
+            }
+
+            .main-navigation ul,
+            .gen-sidebar-nav,
+            .main-navigation:not(.slideout-navigation):not(.toggled) .main-nav>ul,
+            .has-inline-mobile-toggle #site-navigation .inside-navigation>*:not(.navigation-search):not(.main-nav) {
+                display: none;
+            }
+
+            .nav-align-right .inside-navigation,
+            .nav-align-center .inside-navigation {
+                justify-content: space-between;
+            }
+        }
+    </style>
+    <link rel="icon" href="https://sumberskripsi.github.io/img/cropped-soalbelajar-32x32.png" sizes="32x32" />
+    <link rel="icon" href="https://sumberskripsi.github.io/img/cropped-soalbelajar-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="https://sumberskripsi.github.io/img/cropped-soalbelajar-180x180.png" />
+    <meta name="msapplication-TileImage" content="https://sumberskripsi.github.io/img/cropped-soalbelajar-270x270.png" />
+</head>
+
+<body
+    class="home blog wp-custom-logo wp-embed-responsive right-sidebar nav-above-header separate-containers nav-search-enabled nav-aligned-center header-aligned-center dropdown-hover"
+    itemtype="https://schema.org/Blog" itemscope>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-dark-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0.49803921568627" />
+                    <feFuncG type="table" tableValues="0 0.49803921568627" />
+                    <feFuncB type="table" tableValues="0 0.49803921568627" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-red">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 0.27843137254902" />
+                    <feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-midnight">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0" />
+                    <feFuncG type="table" tableValues="0 0.64705882352941" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-magenta-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.78039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.94901960784314" />
+                    <feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-green">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.44705882352941 0.4" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-orange">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.098039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.66274509803922" />
+                    <feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><a class="screen-reader-text skip-link" href="#content" title="Langsung ke isi">Langsung ke isi</a>
+    <nav class="main-navigation nav-align-center has-menu-bar-items sub-menu-right" id="site-navigation"
+        aria-label="Utama" itemtype="https://schema.org/SiteNavigationElement" itemscope>
+        <div class="inside-navigation grid-container">
+            <form method="get" class="search-form navigation-search" action="/">
+                <input type="search" class="search-field" value="" name="q" title="Cari" />
+            </form> <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                <span class="gp-icon icon-menu-bars"><svg viewBox="0 0 512 512" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                        <path
+                            d="M0 96c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24z" />
+                    </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        width="1em" height="1em">
+                        <path
+                            d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                    </svg></span><span class="mobile-menu">Menu</span> </button>
+            <div id="primary-menu" class="main-nav">
+                <ul id="menu-soal-belajar" class=" menu sf-menu">
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1"><a
+                            href="https://sumberskripsi.github.io">Home</a></li>
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2"><a
+                            href="https://sumberskripsi.github.io/page/dmca.html">DMCA</a></li>
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3"><a
+                            href="https://sumberskripsi.github.io/page/privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+                </ul>
+            </div>
+            <div class="menu-bar-items"><span class="menu-bar-item search-item"><a aria-label="Buka Kolom Pencarian"
+                        href="#"><span class="gp-icon icon-search"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M208 48c-88.366 0-160 71.634-160 160s71.634 160 160 160 160-71.634 160-160S296.366 48 208 48zM0 208C0 93.125 93.125 0 208 0s208 93.125 208 208c0 48.741-16.765 93.566-44.843 129.024l133.826 134.018c9.366 9.379 9.355 24.575-.025 33.941-9.379 9.366-24.575 9.355-33.941-.025L337.238 370.987C301.747 399.167 256.839 416 208 416 93.125 416 0 322.875 0 208z" />
+                            </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                width="1em" height="1em">
+                                <path
+                                    d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                            </svg></span></a></span></div>
+        </div>
+    </nav>
+    <header class="site-header grid-container" id="masthead" aria-label="Situs"
+        itemtype="https://schema.org/WPHeader" itemscope>
+        <div class="inside-header grid-container">
+            <h1 class="site-logo">
+                <a href="https://sumberskripsi.github.io" rel="home"> BELAJAR</a>
+            </h1>
+        </div>
+    </header>
+
+    <div class="site grid-container container hfeed" id="page">
+        <div class="site-content" id="content">
+            <div class="content-area" id="primary">
+                    <main class="site-main" id="main">
+        <article id="post-1327" class="post-1327 post type-post status-publish format-standard hentry category-info"
+            itemtype="https://schema.org/CreativeWork" itemscope="">
+            <div class="inside-article">
+                <header class="entry-header" aria-label="Konten">
+                    <h1 class="entry-title" itemprop="headline">Kumpulan Soal Implementasi Stuktur Data</h1>
+                    <div class="entry-meta">
+                       <span
+                            class="byline">oleh <span class="author vcard" itemprop="author"
+                                itemtype="https://schema.org/Person" itemscope=""><span class="author-name"
+                                    itemprop="name">SarahKireinaSalsa</span></span></span>
+                    </div>
+                </header>
+                <div class="entry-content" itemprop="text">
+                    <div style="text-align: center">
+                        <img src="https://tse1.mm.bing.net/th?q=Kumpulan+Soal+Implementasi+Stuktur+Data" alt="Kumpulan Soal Implementasi Stuktur Data">
+                    </div>
+                    <p></p>
+                    <p>SOAL DIATASTENTUKAN STUKTUR​</p>
+                    <div id="ez-toc-container"
+                        class="ez-toc-v2_0_40 counter-hierarchy ez-toc-counter ez-toc-light-blue ez-toc-container-direction">
+                        <div class="ez-toc-title-container">
+                            <p class="ez-toc-title">Daftar Isi</p>
+                            <span class="ez-toc-title-toggle"><a href="#"
+                                    class="ez-toc-pull-right ez-toc-btn ez-toc-btn-xs ez-toc-btn-default ez-toc-toggle"
+                                    area-label="ez-toc-toggle-icon-1"><label for="item-63b392361c4a0"
+                                        aria-label="Table of Content"><span
+                                            style="display: flex;align-items: center;width: 35px;height: 30px;justify-content: center;direction:ltr;"><svg
+                                                style="fill: #999;color:#999" xmlns="http://www.w3.org/2000/svg"
+                                                class="list-377408" width="20px" height="20px" viewBox="0 0 24 24"
+                                                fill="none">
+                                                <path
+                                                    d="M6 6H4v2h2V6zm14 0H8v2h12V6zM4 11h2v2H4v-2zm16 0H8v2h12v-2zM4 16h2v2H4v-2zm16 0H8v2h12v-2z"
+                                                    fill="currentColor"></path>
+                                            </svg><svg style="fill: #999;color:#999" class="arrow-unsorted-368013"
+                                                xmlns="http://www.w3.org/2000/svg" width="10px" height="10px"
+                                                viewBox="0 0 24 24" version="1.2" baseProfile="tiny">
+                                                <path
+                                                    d="M18.2 9.3l-6.2-6.3-6.2 6.3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3h11c.3 0 .5-.1.7-.3.2-.2.3-.5.3-.7s-.1-.5-.3-.7zM5.8 14.7l6.2 6.3 6.2-6.3c.2-.2.3-.5.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3h-11c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7s.1.5.3.7z">
+                                                </path>
+                                            </svg></span></label><input type="checkbox" id="item-63b392361c4a0"></a></span>
+                        </div>
+                        <nav>
+                            <ul class="ez-toc-list ez-toc-list-level-1 ">
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#soal-diatastentukan-stuktur%e2%80%8b">1.
+                                            SOAL DIATASTENTUKAN STUKTUR​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#manfaat-pengimplementasian-data-warehouse">2.
+                                            Manfaat pengimplementasian data warehouse</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#10contoh-soal-essay-stuktur-bumi-dan-jawabanya%e2%80%8b">3.
+                                            10contoh soal essay stuktur bumi dan jawabanya​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#soal-tentang-implementasi-strategi%e2%80%8b">4.
+                                            soal tentang implementasi strategi​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-yang-dimaksud-dengan-data-analog-dan-berikan-contoh-implementasi-nya%e2%80%8b">5.
+                                            Jelaskan yang dimaksud dengan Data Analog dan berikan contoh implementasi nya​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#tuliskan-stuktur-stuktur-teks-narasi-sejarah%e2%80%8b">6.
+                                            tuliskan stuktur stuktur teks narasi sejarah​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#stuktur-akar-rumput-monokotil-dan-dikotilmohon-segera-di-jawab-ya-temen-temen-nanti-di-kumpulkan%e2%80%8b">7.
+                                            stuktur akar rumput monokotil dan dikotil:mohon segera di jawab ya temen temen nanti di kumpulkan​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#definisikan-sistem-basis-data-dan-berikan-contoh-sederhana-implementasi-sistem-basis-data">8.
+                                            Definisikan Sistem Basis Data dan berikan contoh sederhana implementasi sistem basis data ?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-yang-kamu-ketahui-tantang-stuktur-teks-deskripsijawab-y-secepatnya-soal-nya-besok-di-kumpulkan-pliss-minta-bantuan-nya-y%e2%9c%8d%e2%80%8b">9.
+                                            apa yang kamu ketahui tantang stuktur teks deskripsi!jawab y secepatnya soal nya besok di kumpulkan pliss minta bantuan nya y✍​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#mengapa-pengaplikasian-mengimplementasi-konsep-basis-data-relasional-sering-digunakan-pada-pengolahan-data%e2%80%8b">10.
+                                            mengapa pengaplikasian mengimplementasi konsep basis data relasional sering digunakan pada pengolahan data?​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#di-gunakan-swbagai-acuan-dalam-setiap-implementasi-suatu-kegiatan-atau-aktivitas-merulakan-%e2%80%a6-data">11.
+                                            Di gunakan swbagai acuan dalam setiap implementasi suatu kegiatan atau aktivitas merulakan …..Data</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#buatlah-teks-eksposisi-bertema-tentang-makanan-sehat-beserta-stukturnyabantu-jawab-nanti-di-kumpulkan%e2%80%8b">12.
+                                            buatlah teks eksposisi bertema tentang makanan sehat beserta stukturnya?bantu jawab nanti di kumpulkan​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#mengapa-stuktur-data-diperlukan-untuk-membuat-sebuah-aplikasi-dengan-menggunakan-bahasa-pomrograman%e2%80%8b">13.
+                                            Mengapa Stuktur data diperlukan untuk membuat sebuah aplikasi dengan Menggunakan Bahasa Pomrograman?​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-implementasi-dari-sistem-basis-data-dan-berikan-contoh-nyaberikan-contoh-model-data">14.
+                                            Jelaskan implementasi dari sistem basis data dan berikan contoh nya?
+Berikan contoh model Data</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#contoh-teks-ulasan-tentang-makanan-berdasarkan-stukturnya-kak-tolang-bantuin-besuk-dikumpulkan">15.
+                                            contoh teks ulasan tentang makanan berdasarkan stukturnya kak tolang bantuin besuk dikumpulkan</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-yang-dimaksud-dengan-data-analog-dan-berikan-contoh-implementasi-nya%e2%80%8b">16.
+                                            Jelaskan yang dimaksud dengan Data Analog dan berikan contoh implementasi nya​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#bagaimana-cara-mengimplementasikan-php-dengan-css-untuk-menampilkan-data-dari-database">17.
+                                            bagaimana cara mengimplementasikan PHP dengan CSS untuk menampilkan data dari database ?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#melengkapi-stuktur-dan-menelaah-stuktur-fabel">18.
+                                            Melengkapi stuktur  dan menelaah stuktur fabel</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#menelaah-stuktur-dan-kebahasaan-teks-persuasitolong-bantu-besok-dikumpulkan%e2%80%8b">19.
+                                            menelaah stuktur dan kebahasaan teks persuasitolong bantu besok dikumpulkan​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-saja-teks-stuktur-umun-hasil-laporan-observasi-jelaskan-tiap-stuktur-nya-mohon-bantuan-nya-ya-ka-tugas-ini-dikumpulkan-sekarang">20.
+                                            apa saja teks stuktur umun hasil laporan observasi ?jelaskan tiap stuktur nya?  mohon bantuan nya ya ka tugas ini dikumpulkan sekarang </a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-hubungan-antara-implementasi-rumus-dengan-data-data-yang-bersifat-numerik">21.
+                                            Jelaskan hubungan antara implementasi rumus dengan data data yang bersifat numerik?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#soal-contoh-surat-undangan-resmi-dan-tidak-resmi-beserta-stuktur-nyamakasih-%e2%80%8b">22.
+                                            Soal:  Contoh Surat Undangan Resmi dan Tidak Resmi, beserta stuktur nyaMakasih ​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#implementasi-dan-aplikasi-yang-dapat-digunakan-untuk-menyajikan-data-data-yang-berkaitan-dengan-data-data-biologi-adalah%e2%80%8b">23.
+                                            Implementasi dan aplikasi yang dapat digunakan untuk menyajikan data-data yang berkaitan dengan data-data biologi adalah​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#stuktur-teks-pada-soal-cerita-kelinci-sang-penakluk">24.
+                                            stuktur teks pada soal cerita kelinci sang penakluk</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#sebutkan-stuktur-dalam-teks-deskripsi-tolong-di-jawab-hari-ini-besok-harus-di-kumpulkan">25.
+                                            Sebutkan stuktur dalam teks deskripsi?... 
+Tolong di jawab hari ini besok harus di kumpulkan</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#pertanyan-umumpernyataan-penjelasandan-interpretasi-merupakan-stuktur-dari-teks-tolong-dibantu-nanti-mau-dikumpulkan-%e2%80%8b">26.
+                                            pertanyan umum,pernyataan penjelasan,dan interpretasi merupakan stuktur dari teks.       TOLONG DIBANTU NANTI MAU DIKUMPULKAN                      !!!!!​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#soal-tentang-implementasi-dari-masa-ke-masa">27.
+                                            Soal tentang implementasi dari masa ke masa</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#bantu-saya-untuk-mengerjakan-soal-ini-mencari-teks-eksplanasi-dantentukan-stukturnya">28.
+                                            bantu saya untuk mengerjakan soal ini, mencari teks eksplanasi dantentukan stukturnya</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#sebutkan-2-telah-stuktur-isi-pantun-plies-soalnya-besokdikumpulakan">29.
+                                            sebutkan 2 telah stuktur isi pantun
+ plies!!!!! soalnya besokdikumpulakan</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#berikan-contoh-soal-yang-berkaitan-tentang-stuktur-dan-fungsi-jaringan-akar">30.
+                                            berikan contoh soal yang berkaitan tentang stuktur dan fungsi jaringan akar</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#menurut-pendapat-kalian-bagaimana-caranya-mengimplementasikan-ajaran-yang-terdapat-dalam-kisah-asta-dasa-parwapliss-dikumpul-besok-soalnya%e2%80%8b">31.
+                                            Menurut pendapat kalian Bagaimana caranya mengimplementasikan ajaran yang terdapat dalam kisah asta dasa parwapliss dikumpul besok soalnya​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#implementasi-perbandingan-terkait-data-windowa-unix-dan-linux">32.
+                                            Implementasi Perbandingan terkait Data Windowa, Unix, dan Linux</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#buat-5-pertanyaan-dan-jawabannya-yang-berbeda-tentang-%e2%80%9cperan-serta-warga-negara-mendukung-implementasi-wawasankebangsaanjawab-ya-kksoalnya-besuk-di-kumpulkan%e2%80%8b">33.
+                                            Buat 5 pertanyaan dan jawabannya yang berbeda  tentang “Peran Serta Warga Negara Mendukung Implementasi WawasanKebangsaanJawab ya kk,soalnya besuk di kumpulkan:)​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#soni-memakan-bekalnya-dengan-lahap-soal-pola-stuktur-kalimat-diatas-adalah">34.
+                                            Soni memakan bekalnya dengan lahap 
+Soal : 
+Pola /stuktur kalimat diatas adalah ??</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#lakukan-identifikasi-berkaitan-dengan-google-colab-dan-google-research-beserta-implementasinya-sumber-data-dapat-diambil-dari-internet-hasilnya-dikumpulkan-pada-guru-untuk-diberi%e2%80%8b">35.
+                                            Lakukan identifikasi berkaitan dengan Google Colab dan Google Research beserta implementasinya. Sumber data dapat diambil dari internet. Hasilnya dikumpulkan pada guru untuk diberi​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#tahapan-implementasi-kecepatan-data-pada-koneksi-jaringan%e2%80%8b">36.
+                                            tahapan implementasi kecepatan data pada koneksi jaringan​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#sebutkan-stuktur-dalam-teks-deskripsi-tolong-di-jawab-hari-ini-besok-harus-di-kumpulkan">37.
+                                            Sebutkan stuktur dalam teks deskripsi?... 
+Tolong di jawab hari ini besok harus di kumpulkan</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#seberapa-penting-implementasi-tcpip-untuk-komunikasi-data-dalam-jaringan%e2%80%8b">38.
+                                            seberapa penting implementasi tcp/ip untuk komunikasi data dalam jaringan?​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#telaahlah-gurindam-di-bawah-ini-dari-segi-stuktur-penyajianjenis-kalimat-yang-di-gunakandan-hubungan-isi-antarlarik-tolong-di-jawab-ya-soal-nya-mau-di-kumpul">39.
+                                            Telaahlah gurindam di bawah ini dari segi stuktur penyajian,jenis kalimat yang di gunakan,dan hubungan isi antarlarik. Tolong di jawab ya soal nya mau di kumpul</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-hubungan-antara-implementasi-rumus-dengan-data-data-bersifat-numerik">40.
+                                            Jelaskan hubungan antara implementasi rumus dengan data data bersifat numerik</a>
+                                    </li>
+                                                            </ul>
+                        </nav>
+                    </div>
+                                            <h2 class="ez-toc-section" id="soal-diatastentukan-stuktur%e2%80%8b">
+                            1. SOAL DIATASTENTUKAN STUKTUR​</h2><br />
+                        <p><strong>Penjelasan:</strong></p><p>tanah akan gempur dan longsor</p><br />
+                                            <h2 class="ez-toc-section" id="manfaat-pengimplementasian-data-warehouse">
+                            2. Manfaat pengimplementasian data warehouse</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Pertama, data warehouse bisa membantu dalam pengambilan keputusan melalui sebuah sistem khusus terhadap pengkajian sebuah kasus atau masalah di perusahaan.</p><p></p><p>Berikutnya, manfaat data warehouse ini untuk melakukan proses pembersihan terhadap data yang tersedia pada sistem. Selain itu, hal tersebut juga lebih memudahkan dalam penyesuaian dengan struktur perusahaan. Terlebih sebuah perusahaan membutuhkan pengelolaan data yang sangat baik karena struktur perusahaan sangat dipengaruhi oleh data.</p><p></p><p>Manfaat data warehouse lainnya ini untuk memudahkan proses penempatan data sesuai kebutuhan dan strukturnya. Implementasi data warehouse akan lebih mudah dan terarah sehingga maksud dari pengelolaan data perusahaan bisa memenuhi kebutuhan.</p><p><strong></strong></p><p><strong>Jadikan jawaban tercerdas ya!</strong></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="10contoh-soal-essay-stuktur-bumi-dan-jawabanya%e2%80%8b">
+                            3. 10contoh soal essay stuktur bumi dan jawabanya​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>1. Jelaskan secara singkat tentang lapisan troposfer?</p><p>Jawaban:</p><p>Lapisan troposfer adalah lapisan atmosfer yang berada pada ketinggian 0-10 km. Lapisan ini mengandung setidaknya 80% gas penyusun atmosfer Bumi. Oleh sebab itu, lapisan troposfer sangat berpengaruh sangat besar terhadap kehidupan makhluk hidup di muka bumi.</p><p></p><p>2. Apakah yang dimaksud dengan litosfer?</p><p>Jawaban:</p><p>Litosfer adalah daratan bumi yang tersusun dari batuan.</p><p></p><p>3. Sebutkan gempa Bumi berdasarkan sumbernya!</p><p>Jawaban:</p><p>Berdasarkan sumbernya, gempa bumi dibedakan menjadi 4 macam, yaitu:</p><p>Gempa bumi vulkanik, yaitu gempa bumi yang terjadi akibat aktivitas magma gunung berapi.</p><p>Gempa bumi tektonik, yaitu gempa bumi yang disebabkan aktivitas lempeng bumi.</p><p>Gempa bumi runtuhan, yaitu gempa bumi yang disebabkan karena adanya reruntuhan seperti batuan dan bangunan.</p><p>Gempa bumi buatan, yaitu gempa bumi yang disebabkan karena aktivitas manusia</p><p></p><p>4. Bagaimana radiasi material dapat membentuk lapisan kulit Bumi yang pertama?</p><p>Jawaban:</p><p>Lapisan kulit Bumi yang pertama merupakan lapisan lerluar dari Bumi yang sebagian besar terdiri atas batuan. Batuan penyusun utama lapisan kulit bumi adalah batuan beku yang terbentuk dari magma yang keluar dari perut bumi dan membeku karena mengalami proses pendinginan.</p><p></p><p>5. Bagaimana proses pembentukan mineral dapat berlangsung cepat?</p><p>Jawaban:</p><p>Proses pembentukan meniral dapat berlangsung cepat karena pembentukan mineral berlangsung secara alamiah di berbagai lingkungan di bumi yang memungkinkan atom-atom yang bersesuai saling terikat satu sama lain. Faktor-faktor yang mempengaruhi proses pembentukan mineral yaitu suhu dan tekanan.</p><p></p><p>6. Sebutkan tiga macam siklus hidrologi!</p><p>Jawaban:</p><p>Tiga macam siklus hidrologi yaitu siklus hidrologi pendek, siklus hidrologi menengah, dan siklus hidrologi panjang.</p><p></p><p>7. Jelaskan perbedaan antara laut teritorial dengan ZEE!</p><p>Jawaban:</p><p>Laut teritorial adalah wilayah perairan pesisir yang membentang sejauh 22,2 km dari garis dasar pantai wilayah darat suatu negara. Sedangkan Zona Ekonomi Eksklusif (ZEE) adalah perairan sejauh 322 km dari garis dasar laut teritorial suatu negara.</p><p></p><p>8. Bagaimana karakteristik DAS yang berbentuk kipas?</p><p>Jawaban:</p><p>Karakteristik DAS yang berbentuk kipas yaitu:</p><p>Memiliki debit banjir yang terakumulasi dari berbagai arah sungai</p><p>Memiliki waktu yang lebih lama daripada bentuk bulu ayam untuk mencapai mainstream</p><p>Memiliki topografi yang relatif landai daripada bulu ayam.</p><p></p><p>9. Sebutkan faktor-faktor yang mempengaruhi salinitas air laut!</p><p>Jawaban:</p><p>Faktor-faktor yang mempengaruhi salinitas air laut yaitu:</p><p>^Penguapan, semakin besar penguapan maka salinitas air laut semakin tinggi. Sebaliknya, jika penguapan semakin kecil maka salinitas air laut semakin rendah.</p><p>^Curah hujan, semakin tinggi curah hujan maka salinitas semakin rendah. Sebaliknya, jika curah hujan rendah curah hujan maka salinitas air laut semakin tinggi.</p><p>^Air sungai yang bermuara ke laut. Semakin banyak air sungai yang bermuara ke laut maka salinitas air laut semakin rendah. Sebaliknya, semakin sedikit air sungai yang bermuara ke laut maka salinitasnya semakin tinggi.</p><p>^Letak dan ukuran laut, laut yang tidak berhubungan dengan laut lepas dan terdapat di</p><p>daerah arid maka salinitasnya tinggi.</p><p>^Arus laut, laut-laut yang dipengaruhi arus panas maka salinitasnya akan naik dan kebalikannya laut-laut yang dipengaruhi arus dingin maka salinitasnya semakin rendah.</p><p>^Angin, kelembaban udara di atas laut berhubungan dengan penguapan dan penguapan berhubungan dengan besar kecilnya salinitas air laut</p><p></p><p>10. Jelaskan usaha-usaha penanggulangan banjir!</p><p>Jawaban:</p><p>Usaha-Usaha Penanggulangan Banjir:</p><p>Menjaga lingkungan sungai dan selokan supaya tetap bersih dan air bisa mengalir dengan lancar.</p><p>Tidak membuat rumah dipinggiran sungai.</p><p>Melaksanakan program tebang pilih dan reboisasi</p><p>Tidak membuang sampat sembarangan, apalagi di daerah perairan.</p><p>Rajin membersihkan saluran air.</p><p><strong>Penjelasan:</strong></p><p>Jangan lupa untuk jadikan jwbn trbaik yaa :) thnk u</p><br />
+                                            <h2 class="ez-toc-section" id="soal-tentang-implementasi-strategi%e2%80%8b">
+                            4. soal tentang implementasi strategi​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>mengapa letak indonesi dikatakan serategis bagi suatu negara</p><br />
+                                            <h2 class="ez-toc-section" id="jelaskan-yang-dimaksud-dengan-data-analog-dan-berikan-contoh-implementasi-nya%e2%80%8b">
+                            5. Jelaskan yang dimaksud dengan Data Analog dan berikan contoh implementasi nya​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Data yang memiliki deretan nilai</p><p></p><p><strong>Penjelasan:</strong></p><p>Semoga membantu anda</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="tuliskan-stuktur-stuktur-teks-narasi-sejarah%e2%80%8b">
+                            6. tuliskan stuktur stuktur teks narasi sejarah​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>struktur teks cerita sejarah yaitu orientasi, urutan peristiwa, dan reorientasi.</p><p><strong>Penjelasan:</strong></p><p>maaf kalo salah</p><p>semoga membantu</p><br />
+                                            <h2 class="ez-toc-section" id="stuktur-akar-rumput-monokotil-dan-dikotilmohon-segera-di-jawab-ya-temen-temen-nanti-di-kumpulkan%e2%80%8b">
+                            7. stuktur akar rumput monokotil dan dikotil:mohon segera di jawab ya temen temen nanti di kumpulkan​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Akar dikelompokkan menjadi dua, yaitu akar serabut dan akar tunggang.</p><p>1. <strong>Akar</strong><strong> </strong><strong>serabut</strong></p><p>Akar serabut berbentuk seperti serabut. Ukuran akar serabut relatif kecil, tumbuh di pangkal batang, dan besarnya hampir sama. Akar semacam ini dimiliki oleh tumbuhan berkeping satu (monokotil). Misalnya kelapa, rumput, padi, jagung, dan tumbuhan hasil mencangkok.</p><p></p><p>2. <strong>Akar</strong><strong> </strong><strong>tunggang</strong><strong> </strong></p><p>Akar tunggang adalah akar yang terdiri atas satu akar besar yang merupakan kelanjutan batang, sedangkan akar-akar yang lain merupakan cabang dari akar utama. Perbedaan antara akar utama dan akar cabang sangat nyata. <strong>Jenis</strong><strong> </strong><strong>akar</strong><strong> </strong>ini dimiliki oleh tumbuhan berkeping dua (<strong>diko</strong><strong>t</strong><strong>i</strong><strong>l</strong>). Misalnya, kedelai, mangga, jeruk, dan melinjo.</p><p></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="definisikan-sistem-basis-data-dan-berikan-contoh-sederhana-implementasi-sistem-basis-data">
+                            8. Definisikan Sistem Basis Data dan berikan contoh sederhana implementasi sistem basis data ?</h2><br />
+                        <p> </p><p>Basis data adalah kumpulan file-file yang mempunyai kaitan antara satu file dengan file lain sehingga membentuk suatu bangunan data untuk menginformasikan suatu perusahaan atau instansi dalam batasan tertentu</p><p>Sebuah basis data ( Database ) dapat memiliki beberapa basis data. Setiap basis data dapat berisi atau memiliki sejumlah objek basis data seperi file atau tabel.Database</p><p></p><p>contoh:</p><p>OPERASI DASAR KOMPUTER dan PERANGKAT LUNAK DALAM SISTEM INFORMASI</p><p></p><p></p><p> </p><p></p><br />
+                                            <h2 class="ez-toc-section" id="apa-yang-kamu-ketahui-tantang-stuktur-teks-deskripsijawab-y-secepatnya-soal-nya-besok-di-kumpulkan-pliss-minta-bantuan-nya-y%e2%9c%8d%e2%80%8b">
+                            9. apa yang kamu ketahui tantang stuktur teks deskripsi!jawab y secepatnya soal nya besok di kumpulkan pliss minta bantuan nya y✍​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Teks deskripsi adalah sebuah paragraf dimana gagasan utamanya disampaikan dengan cara menggambarkan secara jelas objek, tempat, atau peristiwa yang sedang menjadi topik kepada pembaca. Sehingga pembaca seolah-olah merasakan langsung apa yang sedang diungkapkan dalam teks tersebut</p><p></p><p><strong>Jawaban:</strong></p><p>Ini jawaban saya</p><p><strong>Penjelasan:</strong></p><p>Pada umumnya, teks deskripsi disusun oleh empat elemen dasar yaitu:</p><p></p><p>Judul : untuk mengetahui apa isi dari teks deskripsi tersebut.</p><p>Identifikasi : merupakan kalimat pengantar mengenai apa yang akan dijelaskan pada teks deskripsi.</p><p>Klasifikasi : berisikan urutan atau penggolongan dari topik yang akan dibahas.</p><p>Deskripsi : penjelasan secara detail mengenai topik yang dibahas.</p><p>terima kasih </p><p></p><br />
+                                            <h2 class="ez-toc-section" id="mengapa-pengaplikasian-mengimplementasi-konsep-basis-data-relasional-sering-digunakan-pada-pengolahan-data%e2%80%8b">
+                            10. mengapa pengaplikasian mengimplementasi konsep basis data relasional sering digunakan pada pengolahan data?​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Pengaplikasian konsep basis data relasional sering digunakan pada pengolahan data karena basis data relasional memiliki beberapa keuntungan yang sangat penting dalam mengelola data. Beberapa keuntungan tersebut antara lain:</p><p></p><p>1. Struktur Data yang Terorganisir: Basis data relasional dirancang untuk mengatur data dalam tabel atau relasi, sehingga dapat mempermudah penyimpanan, pemrosesan, dan pengambilan data.</p><p></p><p>2. Konsistensi Data yang Tinggi: Basis data relasional menggunakan aturan integritas referensial untuk memastikan konsistensi data antara tabel yang berhubungan. Hal ini dapat membantu meminimalkan kesalahan dan meningkatkan akurasi data.</p><p></p><p>3. Mudah Digunakan dan Dipelajari: Konsep basis data relasional mudah dipelajari dan dipahami, bahkan oleh orang yang tidak berlatar belakang teknis. Selain itu, banyak perangkat lunak yang tersedia untuk membantu dalam membuat dan mengelola basis data relasional.</p><p></p><p>4. Skalabilitas yang Baik: Basis data relasional dapat dengan mudah diubah dan dikembangkan seiring dengan pertumbuhan dan perubahan bisnis. Ini memungkinkan perusahaan untuk menyesuaikan basis data mereka dengan kebutuhan mereka saat ini dan di masa depan.</p><p></p><p>5. Keamanan Data yang Meningkat: Basis data relasional menyediakan kontrol akses yang kuat dan metode keamanan yang dapat membantu melindungi data dari akses tidak sah atau peretasan.</p><p></p><p>Secara keseluruhan, pengaplikasian konsep basis data relasional memberikan keuntungan yang sangat penting dalam pengolahan data yang dapat membantu meningkatkan efisiensi, akurasi, dan keamanan data.</p><br />
+                                            <h2 class="ez-toc-section" id="di-gunakan-swbagai-acuan-dalam-setiap-implementasi-suatu-kegiatan-atau-aktivitas-merulakan-%e2%80%a6-data">
+                            11. Di gunakan swbagai acuan dalam setiap implementasi suatu kegiatan atau aktivitas merulakan …..Data</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Fungsi data</p><p><strong>Penjelasan:</strong></p><p>data merupakan suatu informasi yang menjadi acuan untuk melakukan suatu kegiatan untuk mendapatkan hasil yang diinginkan.</p><p></p><p>Semoga Membantu</p><br />
+                                            <h2 class="ez-toc-section" id="buatlah-teks-eksposisi-bertema-tentang-makanan-sehat-beserta-stukturnyabantu-jawab-nanti-di-kumpulkan%e2%80%8b">
+                            12. buatlah teks eksposisi bertema tentang makanan sehat beserta stukturnya?bantu jawab nanti di kumpulkan​</h2><br />
+                        <p> <strong>Jawaban:</strong></p><p>Tubuh manusia membutuhkan asupan nutrisi. Asupan ini bisa didapat dari mengonsumsi makanan sehat setiap hari. Makanan sehat bisa diolah sendiri atau membeli makanan yang sudah jadi dan dapat dipastikan memang sehat.</p><p></p><p><strong>Penjelasan:</strong></p><p>Dilansir dari situs Minnesota Food Charter, makanan sehat adalah makanan yang segar dan bisa meningkatkan nutrisi dalam tubuh ketika dikonsumsi. Makanan sehat biasanya mengandung gizi seimbang yang baik untuk tubuh.</p><p></p><p></p><p> Tolong jadikan jawaban tercerdas...<strong>selamat </strong><strong>mengerjakan </strong><strong>(✿^‿^)</strong></p><br />
+                                            <h2 class="ez-toc-section" id="mengapa-stuktur-data-diperlukan-untuk-membuat-sebuah-aplikasi-dengan-menggunakan-bahasa-pomrograman%e2%80%8b">
+                            13. Mengapa Stuktur data diperlukan untuk membuat sebuah aplikasi dengan Menggunakan Bahasa Pomrograman?​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Mending tanya google</p><p><strong>Penjelasan:</strong></p><p>maaf kalo salah</p><br />
+                                            <h2 class="ez-toc-section" id="jelaskan-implementasi-dari-sistem-basis-data-dan-berikan-contoh-nyaberikan-contoh-model-data">
+                            14. Jelaskan implementasi dari sistem basis data dan berikan contoh nya?
+Berikan contoh model Data</h2><br />
+                        <p>Impelementasi Sistem Basis Data Merupakan tahap untuk membangun basis data fisik yang disimpan dalam media penyimpan (storage) sekunder (disk) dengan bantuan DBMS (Database Management System) yang kita pilih. Tahap ini diawali dengan melakukan transformasi dari model data yang telah selesai dibuat ke skema/struktur basis data sesuai dengan dengan DBMS.</p><p>contoh : MySql, Microsoft Access, Sybase, Oracle database, Borland-Interbasi, PostgreSQL, dll.</p><p></p><p>contoh model data : Model Data Berbasis Objek,Model Data Berbasis Record, Model Data Fisik,Model Data Konseptual.</p><br />
+                                            <h2 class="ez-toc-section" id="contoh-teks-ulasan-tentang-makanan-berdasarkan-stukturnya-kak-tolang-bantuin-besuk-dikumpulkan">
+                            15. contoh teks ulasan tentang makanan berdasarkan stukturnya kak tolang bantuin besuk dikumpulkan</h2><br />
+                        <p><strong>Teks ulasan</strong> adalah teks yang berisi tentang sebuah ulasan atau review hasil penilaian terhadap sebuah karya, bisa drama, film, atau buku. Mengulas sebuah karya harus disertai dengan sikap kritis. Hal ini dilakukan agar bis memberikan paparan berisi manfaat untuk perbaikan dari karya yang diulas. <strong>Teks ulasan </strong>memiliki struktur orientasi, tafsiran, evaluasi, dan rangkuman atau dengan kata lain teks ulasan adalah sebuah teks yang berisi ulasan atau review, penilaian, pertimbangan, kupasan, tafsiran, dan komentar mengenai sebuah karya yang telah dibuat sebelumnya.  Dalam bahasa Latin, kata "ulasan" dikenal dengan kata "revidere" atau "recensere", yang berarti melihat kembali, menilai, atau menimbang.  Sedangkan dalam bahasa Inggris, "ulasan" dikenal dengan kata "review". Dan dalam bahasa Belanda disebut "recensie".
+</p><p><strong>Struktur teks ulasan terdiri dari:</strong>
+</p>Orientasi berisi mengenai gambaran umum mengenai suatu karya yang akan diulas selanjutnya.
+Tafsiran berisi gambaran yang lebih spesifik tentang karya yang akan diulas. Pada bagian ini akan disajikan keunikan, keunggulan, dan lainnya yang disajikan lebih mendalam dibandingkan pada bagian Orientasi.
+Evaluasi dimana dalam bagian penulisan isi pada struktur evaluasi ini didasarkan kepada pandangan penulis mengenai karya yang diulas. Penulis juga akan mencantumkan kelebihan dan kekurangan dari karya tersebut.
+Rangkuman berisi tentang kesimpulan dari keseluruhan hal yang telah dibahas pada struktur sebelumnya.
+<p><strong>Pembahasan:</strong>
+</p><p><strong>Contoh teks ulasan tentang makanan:</strong>
+</p><p>Dumbek mungkin berasa aneh bagi yang pertama kali mendengar istilah ini. Dumbek adalah salah satu makanan khas dari Tuban Jawa Timur. Selain Wingko Babat, Tuban juga memiliki makanan unik yakni Dumbek. Bentuknya yang menyerupai terompet yang dibungkus dari daun lontar.
+</p><p>Makanan ini dominan manis dan gurih. Biasanya dijual dalam bentuk rentengan yakni 4.500 sampai 8000 rupiah. Karena makanan ini tidak menggunakan pengawet jadi hanya bertahan 24 jam saja. Satu renteng atau gendel biasanya berisi 5 buah dumbek.
+</p><p>Makanan ini bisa Anda temui di pasar pasar tradisional di Tuban. Tidak banyak referensi tentang makanan ini dan proses pembuatanya pun masih tradisional.</p><p></p><p><strong>Pelajari lebih lanjut:</strong>  </p><p>1.	Materi tentang teks ulasan singkat (https://brainly.co.id/tugas/14180672)
+</p><p>2.	Materi tentang ciri teks ulasan (https://brainly.co.id/tugas/13888324)
+</p><p>3.	Materi tentang kaidah kebahasaan teks ulasan (https://brainly.co.id/tugas/14597223)
+</p><p>----------------------------------------------------------------------------------------------------
+</p><p><strong>Detail jawaban:
+</strong></p><p><strong>Kelas: IX
+</strong></p><p><strong>Mapel: Bahasa Indonesia
+</strong></p><p><strong>Bab: 11
+</strong></p><p><strong>Kode: 9.1.11
+</strong></p><p><strong>#AyoBelajar</strong>
+</p><br />
+                                            <h2 class="ez-toc-section" id="jelaskan-yang-dimaksud-dengan-data-analog-dan-berikan-contoh-implementasi-nya%e2%80%8b">
+                            16. Jelaskan yang dimaksud dengan Data Analog dan berikan contoh implementasi nya​</h2><br />
+                        <p><strong>Penjelasan:</strong></p><p>itu jawabnyadi ats yang ada fotonya jadikan jawaban yang tercerdas</p><p><strong>Jawaban:</strong></p><p>data analog merupakan data yang memiliki deretan nilai yang hampir sama sehingga tidak dapat dibedakan</p><p><strong>Penjelasan:</strong></p><p><strong>semoga</strong><strong> membantu</strong><strong> </strong><strong>:</strong><strong>)</strong></p><br />
+                                            <h2 class="ez-toc-section" id="bagaimana-cara-mengimplementasikan-php-dengan-css-untuk-menampilkan-data-dari-database">
+                            17. bagaimana cara mengimplementasikan PHP dengan CSS untuk menampilkan data dari database ?</h2><br />
+                        Pertama ada perbedaan antara PHP dengan CSS, PHP adalah bahasa pemrograman sedangkan CSS adalah pelengkap dalam pemrograman web, yang pada artinya CSS bukan lah bahasa pemrograman itu sendiri.<br /><br />PHP degan CSS, artinya PHP di gunakan dalam CSS. yang seharusnya CSS dengan PHP, yang dengan nalar bahasa indonesia yag baik dan benar dapat di artikan bahwa CSS di gunakan untuk PHP.<br /><br />penggunaan pengaksesan database menggunakan credential HANYA pada PHP, dengan pengelogikaan sesuai logika masing-masing.<br /><br />
+                                            <h2 class="ez-toc-section" id="melengkapi-stuktur-dan-menelaah-stuktur-fabel">
+                            18. Melengkapi stuktur  dan menelaah stuktur fabel</h2><br />
+                        •Struktur Fabel<br /><br />1.orientasi= bagian pengenalan seperti nama, judul, alur, tempat<br /><br />2.komplikasi= masalah / konflik yg memuncak sampai klimaks<br /><br />3. resolusi= Penyelesaian masalah<br /><br />4. koda= perubahan sifat tokoh dan amanat<br />
+                                            <h2 class="ez-toc-section" id="menelaah-stuktur-dan-kebahasaan-teks-persuasitolong-bantu-besok-dikumpulkan%e2%80%8b">
+                            19. menelaah stuktur dan kebahasaan teks persuasitolong bantu besok dikumpulkan​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>sumpah pemuda yang dilaksanakan di yogyakarta</p><p><strong>Penjelasan:</strong></p><p>kalau tdak slah itu</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="apa-saja-teks-stuktur-umun-hasil-laporan-observasi-jelaskan-tiap-stuktur-nya-mohon-bantuan-nya-ya-ka-tugas-ini-dikumpulkan-sekarang">
+                            20. apa saja teks stuktur umun hasil laporan observasi ?jelaskan tiap stuktur nya?  mohon bantuan nya ya ka tugas ini dikumpulkan sekarang </h2><br />
+                        observasi,komplikasi,resolusi,koda<br />
+                                            <h2 class="ez-toc-section" id="jelaskan-hubungan-antara-implementasi-rumus-dengan-data-data-yang-bersifat-numerik">
+                            21. Jelaskan hubungan antara implementasi rumus dengan data data yang bersifat numerik?</h2><br />
+                        <p>implementasi rumus dengan data data yang bersifat numerik dapat diterapkan menggunakan operator aritmatika pada program.</p>Pembahasan<p>rumus perhitungan dapat kita implementasikan pada program untuk menghitung suatu nilai berdasarkan data-data numerik dengan memanfaatkan operator aritmatika yang tersedia dalam bahasa pemrograman.</p><p>Berikut ini beberapa operator matematika yang tersedia dalam bahasa pemrograman pada umumnya</p><p>(+
+) Penjumlahan   5 + 3 = 8
+</p><p>(-)  Pengurangan   5 – 3 = 2
+</p><p>(*) Perkalian          5 * 3 = 15
+</p><p>(/) Pembagian       5.0 / 2.0 = 2.5
+</p><p>(%) Sisa Bagi (Modulus)     5 % 2 = 1</p><p>Modulus hanya berlaku pada tipe data bilangan bulat atau integer saja.</p><br />Pelajari lebih lanjut<p>Class dan obyek handphone dalam java https://brainly.co.id/tugas/18570031</p><br />Detil Jawaban<p><strong>Kelas </strong>: 10</p><p><strong>Bab </strong>: Mengenal Pemrograman Komputer</p><p><strong>Kata Kunci </strong>: hubungan antara implementasi rumus dengan data data yang bersifat numerik</p><br />
+                                            <h2 class="ez-toc-section" id="soal-contoh-surat-undangan-resmi-dan-tidak-resmi-beserta-stuktur-nyamakasih-%e2%80%8b">
+                            22. Soal:  Contoh Surat Undangan Resmi dan Tidak Resmi, beserta stuktur nyaMakasih ​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>contoh surat undangan resmi:undangan kehadiran,undangan untuk acara penting</p><p>contoh surat undangan tidak resmi:undangan ulang tahun, undangan khitanan</p><br />
+                                            <h2 class="ez-toc-section" id="implementasi-dan-aplikasi-yang-dapat-digunakan-untuk-menyajikan-data-data-yang-berkaitan-dengan-data-data-biologi-adalah%e2%80%8b">
+                            23. Implementasi dan aplikasi yang dapat digunakan untuk menyajikan data-data yang berkaitan dengan data-data biologi adalah​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Statistika dan diagram penyajian data</p><p><strong>Penjelasan:</strong></p><p>Maaf banget kalo salah</p><p>Semiga membantu ya</p><br />
+                                            <h2 class="ez-toc-section" id="stuktur-teks-pada-soal-cerita-kelinci-sang-penakluk">
+                            24. stuktur teks pada soal cerita kelinci sang penakluk</h2><br />
+                        Orientasi <br />Komplikasi<br />Resolusi <br />Koda <br />Maaf klo salah orientasi<br />komplikasi<br />resolusi<br />pesan/amanat (koda)<br /><br />
+                                            <h2 class="ez-toc-section" id="sebutkan-stuktur-dalam-teks-deskripsi-tolong-di-jawab-hari-ini-besok-harus-di-kumpulkan">
+                            25. Sebutkan stuktur dalam teks deskripsi?... 
+Tolong di jawab hari ini besok harus di kumpulkan</h2><br />
+                        Identifikasi: penentu identitas seseorang, benda, dan sebagainya.<br />Klasifikasi, penyusunan ber-sistem dalam kelompok menurut kaidah atau standar yang telah ditetapkan.<br />Deskripsi bagian: bagian teks yang berisi tentang gambaran-gambaran bagian didalam teks tersebut.identifikasi→pengertian, lokasi, paparan umum<br />deskripsi bagian→ciri ciri<br />penutup→kesan<br />
+                                            <h2 class="ez-toc-section" id="pertanyan-umumpernyataan-penjelasandan-interpretasi-merupakan-stuktur-dari-teks-tolong-dibantu-nanti-mau-dikumpulkan-%e2%80%8b">
+                            26. pertanyan umum,pernyataan penjelasan,dan interpretasi merupakan stuktur dari teks.       TOLONG DIBANTU NANTI MAU DIKUMPULKAN                      !!!!!​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>struktur dari teks eksplanasi</p><p><strong>Penjelasan:</strong></p><p>maaf kalo salah </p><p>itu yang saya tau</p><p></p><p>Pernyataan Umum, Deretan Penjelas dan Interpretasi adalah struktur dari Teks Eksplanasi. Yang dimaksud dengan teks eksplanasi adalah teks yang berisi penjelasan (eksplanasi) mengenai proses terbentuk atau terjadinya suatu hal, bisa fenomena alam atau fenomena sosial. Adapun pengertian masing-masing struktur teks eksplanasi ini dijelaskan sebagai berikut.</p><p></p><p>PERNYATAAN UMUM</p><p></p><p>Merupakan bagian dari teks yang berisi mengenai penjelasan umum mengenai fenomena yang dibahas. Umumnya pernyataan umum ini berisi pengenalan awal fenomena.</p><p></p><p>DERETAN PENJELAS</p><p></p><p>Merupakan bagian dari teks eksplanasi yang berisi penjelasan mengenai proses mengapa suatu fenomena terjadi. Pada bagian ini kita bisa menjumpai gambaran rinci penyebab serta akibat dari fenomena yang dibahas. Biasanya bagian ini lebih dari satu paragraf.</p><p></p><p>INTERPRETASI</p><p></p><p>Merupakan bagian dari teks eksplanasi yang disebut juga dengan penutup. Pada bagian ini dijumpai intisari atau kesimpulan dari keseluruhan teks yang ditarik dari bagian pernyataan umum dan juga deretan penjelas. Keberadaan bagian ini sifatnya opsional, bukan sebuah kewajiban.</p><p></p><p>Untuk lebih memahami materi mengenai STRUKTUR TEKS EKSPLANASI ini, silahkan simak penjelasan lebih lanjut pada tautan berikut: </p><p></p><p>pengertian deretan penjelas brainly.co.id/tugas/12809292</p><p>jelaskan struktur teks eksplanasi brainly.co.id/tugas/2260362</p><p>mengapa teks eksplanasi berisi penjelasan mengenai sebuah fenomena brainly.co.id/tugas/13412481</p><p></p><p>• • • • • • • • • • • • • • • • • • • • • • • • • • •</p><p></p><p>Kode Soal   : -</p><p>Kelas           : VII (1 SMP)</p><p>Pelajaran     : Bahasa Indonesia</p><p>Kategori      : Teks Eksplanasi </p><p>Kata Kunci  : Penjelas, Pernyataan, Umum</p><br />
+                                            <h2 class="ez-toc-section" id="soal-tentang-implementasi-dari-masa-ke-masa">
+                            27. Soal tentang implementasi dari masa ke masa</h2><br />
+                        1. Bagaimana pelaksanaan / pengamalan pancasila di kehidupan sehari-hari di masa orde lama dalam masyarakat?<br />2. Apa latar belakang dibalik keluarnya UUDS 1950?<br />3. Apa contoh program pemerintah saat itu dalam usaha penerapan pancasila di bidang pendidikan?<br />4. Mengapa presiden Soekarno memutuskan untuk memberlakukan konsep nasakom ketimbang pancasila di akhir dekade 1950an?<br />5. Bagaimana reaksi rakyat saat konsep pancasila saat itu diganti?<br />6. Mengapa konsep negara federasi sempat dipilih menggantikan konsep negara kesatuan sesuai pancasila di orde lama?<br />7. Apa yang melatarbelakangi Soekarno menetapkan jabatan presiden seumur hidup?<br />8. Bagaimanakah pengajaran pancasila di sekolah-sekolah saat itu?<br />9. Ada motif dibalik pembentukan MPRS dan DPRGR?<br />
+                                            <h2 class="ez-toc-section" id="bantu-saya-untuk-mengerjakan-soal-ini-mencari-teks-eksplanasi-dantentukan-stukturnya">
+                            28. bantu saya untuk mengerjakan soal ini, mencari teks eksplanasi dantentukan stukturnya</h2><br />
+                        strukuturnya adl:<br />1. bagian pembuka(parnyataan umum)<br />bagian ini berisikan kalimat yg menyatakan umum dari seorang penulis tantang suatu pokok bahasan.<br />2.bagian isi(sebab akibat) <br />bagian ini berisi tentang penjelasan dari pokok bahasan yang detail.<br />3.bagian penutup(interpretasi)<br />berisi kesimpulan dari fenomena yang dibahas. juga dapat berupa rangkuman berdasarkan dan yang ada di dua tempat di atas.<br />
+                                            <h2 class="ez-toc-section" id="sebutkan-2-telah-stuktur-isi-pantun-plies-soalnya-besokdikumpulakan">
+                            29. sebutkan 2 telah stuktur isi pantun
+ plies!!!!! soalnya besokdikumpulakan</h2><br />
+                        a. baris pertama dan ke-2 merupakan sampiran<br />b. 3 dan 4 adalah isi1. pada bait 1 dan 2 disebut sampiran itu  tidak ada artinya seperti memakai rima/ sajak <br />2. bait ke 3 dan 4 itu merupakan isi dari pantun yang menyampaikan maksud dari pantun tersebut seperti tujuan dari pantun itu sendiri.<br />-____-<br />
+                                            <h2 class="ez-toc-section" id="berikan-contoh-soal-yang-berkaitan-tentang-stuktur-dan-fungsi-jaringan-akar">
+                            30. berikan contoh soal yang berkaitan tentang stuktur dan fungsi jaringan akar</h2><br />
+                        sebutkan bagian-bagian akar dari dalam ke luar!<br />
+                                            <h2 class="ez-toc-section" id="menurut-pendapat-kalian-bagaimana-caranya-mengimplementasikan-ajaran-yang-terdapat-dalam-kisah-asta-dasa-parwapliss-dikumpul-besok-soalnya%e2%80%8b">
+                            31. Menurut pendapat kalian Bagaimana caranya mengimplementasikan ajaran yang terdapat dalam kisah asta dasa parwapliss dikumpul besok soalnya​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>aku juga bingung </p><p><strong>Penjelasan:</strong></p><p> kok sama kaya soal temaku </p><p></p><p><strong>Jawaban:</strong></p><p>yang terkandung dalam kisah Wana Parwa adalah berkenaan dengan pengorbanan. Pengorbanan adalah sikap yang dimuliakan dalam ajaran agama Hindu.</p><p></p><p><strong>Penjelasan:</strong></p><p> kaya gini bukan ya???</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="implementasi-perbandingan-terkait-data-windowa-unix-dan-linux">
+                            32. Implementasi Perbandingan terkait Data Windowa, Unix, dan Linux</h2><br />
+                        <p><strong>Jawaban:</strong></p><p><strong>Windows</strong></p><p> Sistem operasi ini dirancang untuk berjalan pada perangkat keras x86 seperti AMD dan prosesor Intel. Sistem operasi Windows hadir dengan hampir semua perusahaan yang membuat PC atau laptop.</p><p></p><p><strong>Linux</strong></p><p>Sementara itu, Linux merupakan sistem operasi open-source berbasis UNIX, dibuat pada tahun 1991. Sistem operasi Linux juga dilengkapi dengan antarmuka pengguna grafis (GUI) dengan beberapa perangkat lunak yang diperlukan yang digunakan setiap hari.</p><p></p><br />
+                                            <h2 class="ez-toc-section" id="buat-5-pertanyaan-dan-jawabannya-yang-berbeda-tentang-%e2%80%9cperan-serta-warga-negara-mendukung-implementasi-wawasankebangsaanjawab-ya-kksoalnya-besuk-di-kumpulkan%e2%80%8b">
+                            33. Buat 5 pertanyaan dan jawabannya yang berbeda  tentang “Peran Serta Warga Negara Mendukung Implementasi WawasanKebangsaanJawab ya kk,soalnya besuk di kumpulkan:)​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>1. Bagaimana Cara Kita Memelihara Kerukunan Umat Beragama Jwb : Dengan Menghargai Umat Beragama Dalam Melakukan Ibadah,Berkerja Sama,Dan Bergotong Royong </p><p></p><p>2. Bagaimana Cara Kita Memelihara Nilai Nilai Positif Dalam Hidup Jwb : Dengan Cara Membantu Orang,Berkerja Sama Dan Bergotong Royong</p><p></p><p>Maaf cuma dua aja yg lainnya cari sendiri ya dan semoga bermanfaat</p><br />
+                                            <h2 class="ez-toc-section" id="soni-memakan-bekalnya-dengan-lahap-soal-pola-stuktur-kalimat-diatas-adalah">
+                            34. Soni memakan bekalnya dengan lahap 
+Soal : 
+Pola /stuktur kalimat diatas adalah ??</h2><br />
+                        <p><strong>Penjelasan:</strong></p><p>Soni    memakan.   bekalnya    dengan lahap</p><p><strong>S</strong><strong>.</strong><strong> </strong><strong> </strong><strong> </strong><strong> </strong><strong> </strong><strong> </strong><strong> </strong><strong> </strong><strong> </strong><strong> </strong><strong>P</strong><strong> </strong><strong> </strong><strong> </strong><strong> </strong><strong> </strong><strong> </strong><strong> </strong><strong> </strong><strong> </strong><strong> </strong><strong> </strong><strong> </strong><strong> </strong><strong> </strong><strong> </strong><strong> </strong><strong> </strong><strong> </strong><strong> </strong><strong>O</strong><strong>. </strong><strong> </strong><strong> </strong><strong> </strong><strong> </strong><strong> </strong><strong> </strong><strong> </strong><strong> </strong><strong> </strong><strong> </strong><strong> </strong><strong> </strong><strong> </strong><strong> </strong><strong> </strong><strong> </strong><strong>K</strong></p><p>S.p .o. k</p><p>Soni memakan bekalnya dengan lahap </p><p>Maaf kalau salah</p><br />
+                                            <h2 class="ez-toc-section" id="lakukan-identifikasi-berkaitan-dengan-google-colab-dan-google-research-beserta-implementasinya-sumber-data-dapat-diambil-dari-internet-hasilnya-dikumpulkan-pada-guru-untuk-diberi%e2%80%8b">
+                            35. Lakukan identifikasi berkaitan dengan Google Colab dan Google Research beserta implementasinya. Sumber data dapat diambil dari internet. Hasilnya dikumpulkan pada guru untuk diberi​</h2><br />
+                        <p>Google Colab adalah platform gratis yang dikembangkan oleh Google untuk membantu pengembangan dan eksekusi kode pada sistem berbasis cloud. Ini memungkinkan pengguna untuk menjalankan kode Python dan menggunakan GPU atau TPU secara gratis. Ini memiliki akses ke banyak bibliotek populer seperti TensorFlow, Keras, PyTorch, dan lainnya.</p><p>Implementasi Google Colab sangat berguna bagi para data scientist dan pengembang machine learning yang ingin mengeksekusi model mereka dengan mudah tanpa harus memiliki perangkat keras atau pemrosesan yang kuat. Google Colab juga memiliki antarmuka yang intuitif dan mempermudah kerja tim, karena memungkinkan beberapa orang untuk bekerja pada satu dokumen secara bersamaan.</p><p>Google Research adalah bagian dari Google yang fokus pada penelitian dan pengembangan produk. Ini mencakup bidang seperti machine learning, sistem jaringan, manajemen data, sistem operasi, dan banyak lagi. Google Research bekerja sama dengan para peneliti dan pengembang untuk menciptakan solusi inovatif untuk masalah kompleks.</p><p>Implementasi Google Research dapat dilihat dalam banyak produk Google seperti Google Assistant, Google Photos, Google Translate, dan banyak lagi. Ini memastikan bahwa produk Google selalu up-to-date dan memberikan pengalaman pengguna yang optimal. Google Research juga membantu memastikan bahwa teknologi Google tetap pada garis depan industri dan menghasilkan solusi yang efisien dan inovatif.</p><p><strong>Jawaban:</strong></p><p></p><p>Google Colab adalah sebuah lingkungan pengembangan online yang disediakan oleh Google. Colab memungkinkan Anda menggunakan dan membagikan dokumen yang berisi kode, teks, dan visualisasi. Colab menyediakan notebook gratis yang dapat digunakan untuk pelatihan, menguji, dan membuat model Machine Learning.</p><p></p><p>Google Research merupakan divisi riset yang dimiliki oleh Google. Mereka mengembangkan teknologi baru, mempelajari masalah yang ada, dan melakukan riset untuk membantu Google dan bisnis-bisnis lainnya menciptakan produk yang lebih baik.</p><p></p><p>Implementasi Google Colab dan Google Research:</p><p>1. Menggunakan Google Colab untuk membangun model machine learning. Anda dapat menggunakan Colab untuk membuat dan melatih model machine learning menggunakan dataset yang disediakan oleh Google.</p><p>2. Menggunakan Google Research untuk menggali pengetahuan baru. Anda dapat menggunakan hasil riset yang dilakukan oleh Google Research untuk membangun model machine learning yang lebih efisien.</p><p>3. Menggunakan Google Colab dan Google Research untuk melakukan pelatihan model machine learning. Anda dapat menggunakan dataset yang disediakan oleh Google Research untuk melakukan pelatihan model machine learning di Google Colab.</p><br />
+                                            <h2 class="ez-toc-section" id="tahapan-implementasi-kecepatan-data-pada-koneksi-jaringan%e2%80%8b">
+                            36. tahapan implementasi kecepatan data pada koneksi jaringan​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Implementasi kecepatan data pada koneksi jaringan melibatkan serangkaian tahapan yang perlu dilakukan. Berikut adalah beberapa tahapan umum yang terkait dengan implementasi kecepatan data pada koneksi jaringan:</p><p></p><p>Evaluasi Infrastruktur Jaringan: Evaluasi infrastruktur jaringan yang ada untuk mengidentifikasi kelemahan atau batasan yang mungkin mempengaruhi kecepatan data. Hal ini meliputi memeriksa perangkat keras jaringan, konektivitas fisik, dan konfigurasi jaringan saat ini.</p><p></p><p>Penyedia Layanan Internet (ISP): Menghubungi penyedia layanan internet untuk meninjau dan memperbarui paket layanan yang tersedia. Memastikan bahwa Anda memiliki paket yang sesuai dengan kebutuhan kecepatan data yang diinginkan.</p><p></p><p>Penyesuaian Peralatan Jaringan: Memastikan bahwa peralatan jaringan, seperti router, switch, dan firewall, mampu mendukung kecepatan data yang diinginkan. Jika perlu, melakukan penyesuaian atau peningkatan perangkat keras jaringan untuk meningkatkan kinerja dan kecepatan.</p><p></p><p>Optimalisasi Konfigurasi Jaringan: Mengoptimalkan konfigurasi jaringan untuk meningkatkan kecepatan data. Ini dapat melibatkan mengatur parameter jaringan seperti QoS (Quality of Service), mengoptimalkan penggunaan bandwidth, dan mengkonfigurasi protokol jaringan yang efisien.</p><p></p><p>Penggunaan Teknologi Terkini: Mengadopsi teknologi terbaru yang dapat meningkatkan kecepatan data, seperti menggunakan koneksi jaringan berkecepatan tinggi seperti fiber optic, mengimplementasikan teknologi nirkabel yang lebih cepat seperti Wi-Fi 6 atau 5G, atau menggunakan teknologi kompresi data untuk mempercepat transfer data.</p><p></p><p>Penggunaan Cache dan CDN: Memanfaatkan teknologi caching (penyimpanan sementara) dan CDN (Content Delivery Network) untuk mempercepat akses dan pengiriman konten melalui jaringan. Caching dapat mengurangi waktu akses ke sumber daya yang sering diminta, sementara CDN dapat mendistribusikan konten ke server terdekat dengan pengguna untuk mengurangi latensi.</p><p></p><p>Pengelolaan Lalu Lintas Jaringan: Mengelola lalu lintas jaringan dengan bijak, termasuk mengidentifikasi dan memprioritaskan aplikasi atau layanan yang memerlukan kecepatan data tinggi, serta mengatur kebijakan dan pembatasan penggunaan jaringan yang sesuai.</p><p></p><p>Monitoring dan Pemeliharaan: Melakukan pemantauan dan pemeliharaan secara teratur untuk memastikan kinerja dan kecepatan jaringan tetap optimal. Melakukan pemantauan terhadap lalu lintas jaringan, menganalisis masalah yang terjadi, dan melakukan tindakan perbaikan jika diperlukan.</p><br />
+                                            <h2 class="ez-toc-section" id="sebutkan-stuktur-dalam-teks-deskripsi-tolong-di-jawab-hari-ini-besok-harus-di-kumpulkan">
+                            37. Sebutkan stuktur dalam teks deskripsi?... 
+Tolong di jawab hari ini besok harus di kumpulkan</h2><br />
+                        Identifikasi: penentu identitas seseorang, benda, dan sebagainya.<br />Klasifikasi, penyusunan ber-sistem dalam kelompok menurut kaidah atau standar yang telah ditetapkan.<br />Deskripsi bagian: bagian teks yang berisi tentang gambaran-gambaran bagian didalam teks tersebut.aku cuma bisa jawab strukturnya yaitu deskripsi bagian dll<br />
+                                            <h2 class="ez-toc-section" id="seberapa-penting-implementasi-tcpip-untuk-komunikasi-data-dalam-jaringan%e2%80%8b">
+                            38. seberapa penting implementasi tcp/ip untuk komunikasi data dalam jaringan?​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>penting, karena digunakan untuk proses pertukaran data antar komputer dan juga mengatur bagaimana data bisa dikirim dan diterima antar komputer, tentunya dengan menggunakan jaringan internet</p><p></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="telaahlah-gurindam-di-bawah-ini-dari-segi-stuktur-penyajianjenis-kalimat-yang-di-gunakandan-hubungan-isi-antarlarik-tolong-di-jawab-ya-soal-nya-mau-di-kumpul">
+                            39. Telaahlah gurindam di bawah ini dari segi stuktur penyajian,jenis kalimat yang di gunakan,dan hubungan isi antarlarik. Tolong di jawab ya soal nya mau di kumpul</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>foto nya mna kak? kok gada kak?</p><br />
+                                            <h2 class="ez-toc-section" id="jelaskan-hubungan-antara-implementasi-rumus-dengan-data-data-bersifat-numerik">
+                            40. Jelaskan hubungan antara implementasi rumus dengan data data bersifat numerik</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Hubungan antara implementasi rumus dengan data data bersifat numerik <strong>adalah dengan penggunaan rumus yang tepat maka perhitungan pada data numerik akan mendapatkan hasil yang tepat</strong>.</p><p><strong>Penjelasan:</strong></p><p>mengelolah sebuah data yang bersifat numerik tidak dapat lepas dari sebuah rumus, hal ini dikarenakan untuk mendapatkan hasil yang tepat, data tersebut harus dimasukkan kedalam rumus dan dihitung sesuai dengan ketentuan aritmatika, sehingga hasil yang didapatkan akan lebih akurat.</p>Pelajari lebih lanjut
+<p>Materi tentang statiska dan statistik brainly.co.id/tugas/8080193</p><p>---------------------------------</p><p></p>Detil Jawaban  <p><strong>Kelas</strong> : VIII (2 SMP)
+</p><p><strong>Mapel </strong>: IPS
+</p><p><strong>Bab : </strong>Fungsi dan Peran Sumber Daya Alam dalam Pembangunan Nasional
+</p><p><strong>Kode </strong>: 8.10.3
+</p><p><strong>Kate Kunci :</strong> Statistik, data.</p><p>#BelajarBersamaBrainly</p><br />
+                    
+                </div>
+                <div class="youtubeVideo" style="text-align: center">
+                    <h3>Video Terkait</h3>
+                    <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/r51TRDECIw4?controls=0" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"allowfullscreen></iframe>
+                </div>
+                <footer class="entry-meta" aria-label="Meta postingan">
+                    <span class="cat-links"><span class="gp-icon icon-categories"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path
+                                    d="M0 112c0-26.51 21.49-48 48-48h110.014a48 48 0 0143.592 27.907l12.349 26.791A16 16 0 00228.486 128H464c26.51 0 48 21.49 48 48v224c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V112z">
+                                </path>
+                            </svg></span><span class="screen-reader-text">Kategori </span>b_indonesia</span>
+            </div>
+        </article>
+    </main>
+            </div>
+            <div class="widget-area sidebar is-right-sidebar" id="right-sidebar">
+                <div class="inside-right-sidebar">
+                    <aside id="categories-2" class="widget inner-padding widget_categories">
+                        <h2 class="widget-title">Topik</h2>
+                        <ul>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://sumberskripsi.github.io/kisi-kisi-pas-mtk-kelas-8-semester-1-2019.html">Kisi Kisi Pas Mtk Kelas 8 Semester 1 2019</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://sumberskripsi.github.io/contoh-soal-cpns-2023.html">Contoh Soal Cpns 2023</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://sumberskripsi.github.io/judul-skripsi-tentang-pengenalan-bilangan-di-paud.html">Judul Skripsi Tentang Pengenalan Bilangan Di Paud</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://sumberskripsi.github.io/kisi-kisi-pedoman-observasi-teori-sikap-academia.html">Kisi Kisi Pedoman Observasi Teori Sikap Academia</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://sumberskripsi.github.io/kumpulan-soal-pai-dan-bp-kelas-6-kurikulum-2013.html">Kumpulan Soal Pai Dan Bp Kelas 6 Kurikulum 2013</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://sumberskripsi.github.io/download-kisi-soal-ipa-k13-kelas-8-semester-2.html">Download Kisi Soal Ipa K13 Kelas 8 Semester 2</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://sumberskripsi.github.io/kumpulan-contoh-soal-getaran-gelombang-dan-bunyi-pdf.html">Kumpulan Contoh Soal Getaran Gelombang Dan Bunyi Pdf</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://sumberskripsi.github.io/judul-skripsi-film-pembangunan-konflik.html">Judul Skripsi Film Pembangunan Konflik</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://sumberskripsi.github.io/kisi-kisi-dentine-unair-2020.html">Kisi Kisi Dentine Unair 2020</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://sumberskripsi.github.io/kumpulan-contoh-judul-skripsi-ffkm-esa-unggul.html">Kumpulan Contoh Judul Skripsi Ffkm Esa Unggul</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://sumberskripsi.github.io/judul-skripsis-teknologi-dalam-dunia-bisnis.html">Judul Skripsis Teknologi Dalam Dunia Bisnis</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://sumberskripsi.github.io/kumpulan-judul-skripsi-ilmu-kesejahteraan-sosial-tentang-anak-asuh.html">Kumpulan Judul Skripsi Ilmu Kesejahteraan Sosial Tentang Anak Asuh</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://sumberskripsi.github.io/batas-indonesia-bagian-timur-adalah.html">Batas Indonesia Bagian Timur Adalah</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://sumberskripsi.github.io/kumpulan-soal-pilihan-ganda-pengoperasian-dan-perawatan-diesel-generator.html">Kumpulan Soal Pilihan Ganda Pengoperasian Dan Perawatan Diesel Generator</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://sumberskripsi.github.io/judul-skripsi-tentang-akuntabilitas.html">Judul Skripsi Tentang Akuntabilitas</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://sumberskripsi.github.io/kisi-kisi-soal-ipa-sd-kelas-4.html">Kisi Kisi Soal Ipa Sd Kelas 4</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://sumberskripsi.github.io/sebutkan-4-negara.html">Sebutkan 4 Negara</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://sumberskripsi.github.io/kumpulan-soal-membuat-pemrograman-basis-data.html">Kumpulan Soal Membuat Pemrograman Basis Data</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://sumberskripsi.github.io/contoh-kumpulan-soal-usm-unisba.html">Contoh Kumpulan Soal Usm Unisba</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://sumberskripsi.github.io/jelaskan-yang-dimaksud-dengan-ftp-dan-apa-kegunaannya.html">Jelaskan Yang Dimaksud Dengan Ftp Dan Apa Kegunaannya</a>
+                                </li>
+                                                    </ul>
+
+                    </aside>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="site-footer">
+        <footer class="site-info" aria-label="Situs" itemtype="https://schema.org/WPFooter" itemscope>
+            <div class="inside-site-info grid-container">
+                <div class="copyright-bar">
+                    <span class="copyright">&copy; 2023 <a href="https://sumberskripsi.github.io"
+                            itemprop="url">BELAJAR</a></span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <a title="Gulirkan kembali ke puncak laman" aria-label="Gulirkan kembali ke puncak laman" rel="nofollow"
+        href="#" class="generate-back-to-top" data-scroll-speed="400" data-start-scroll="300">
+        <span class="gp-icon icon-arrow-up"><svg viewBox="0 0 330 512" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill-rule="evenodd"
+                clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
+                <path
+                    d="M305.863 314.916c0 2.266-1.133 4.815-2.832 6.514l-14.157 14.163c-1.699 1.7-3.964 2.832-6.513 2.832-2.265 0-4.813-1.133-6.512-2.832L164.572 224.276 53.295 335.593c-1.699 1.7-4.247 2.832-6.512 2.832-2.265 0-4.814-1.133-6.513-2.832L26.113 321.43c-1.699-1.7-2.831-4.248-2.831-6.514s1.132-4.816 2.831-6.515L158.06 176.408c1.699-1.7 4.247-2.833 6.512-2.833 2.265 0 4.814 1.133 6.513 2.833L303.03 308.4c1.7 1.7 2.832 4.249 2.832 6.515z"
+                    fill-rule="nonzero" />
+            </svg></span>
+    </a>
+    <script id="generate-a11y">
+        ! function() {
+            "use strict";
+            if ("querySelector" in document && "addEventListener" in window) {
+                var e = document.body;
+                e.addEventListener("mousedown", function() {
+                    e.classList.add("using-mouse")
+                }), e.addEventListener("keydown", function() {
+                    e.classList.remove("using-mouse")
+                })
+            }
+        }();
+    </script>
+    <!--[if lte IE 11]>
+<script src='https://sumberskripsi.github.io/js/classList.min.js' ?ver=3.2.4' id='generate-classlist-js'></script>
+<![endif]-->
+    <script id='generate-menu-js-extra'>
+        var generatepressMenu = {
+            "toggleOpenedSubMenus": "1",
+            "openSubMenuLabel": "Buka Submenu",
+            "closeSubMenuLabel": "Tutup submenu"
+        };
+    </script>
+    <script src='https://sumberskripsi.github.io/js/menu.min.js' ?ver=3.2.4' id='generate-menu-js'></script>
+    <script id='generate-navigation-search-js-extra'>
+        var generatepressNavSearch = {
+            "open": "Buka Kolom Pencarian",
+            "close": "Tutup Kolom Pencarian"
+        };
+    </script>
+    <script src='https://sumberskripsi.github.io/js/navigation-search.min.js' ?ver=3.2.4' id='generate-navigation-search-js'></script>
+    <script id='generate-back-to-top-js-extra'>
+        var generatepressBackToTop = {
+            "smooth": "1"
+        };
+    </script>
+    <script src='https://sumberskripsi.github.io/js/back-to-top.min.js' ?ver=3.2.4' id='generate-back-to-top-js'></script>
+<script type='text/javascript' src='//cloudlessmajesty.com/8d/be/84/8dbe84c54b7cc5b78aa0e0a1fbdbae07.js'></script>
+<!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4777688,4,0,0,0,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4777688&101" alt="" border="0"></a></noscript>
+<!-- Histats.com  END  -->
+</body>
+
+</html>

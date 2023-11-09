@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html lang="id" prefix="og: https://ogp.me/ns#">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jelaskan Apa Yang Dimaksud Dengan Closure Di Php - BELAJAR</title>
+    <meta name="description" content="Jelaskan Apa Yang Dimaksud Dengan Closure Di Php, , , , , , , 0, , , , , , 0, jelaskan-apa-yang-dimaksud-dengan-closure-di-php, BELAJAR" />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Jelaskan Apa Yang Dimaksud Dengan Closure Di Php - BELAJAR" />
+    <meta property="og:description" content="Jelaskan Apa Yang Dimaksud Dengan Closure Di Php, , , , , , , 0, , , , , , 0, jelaskan-apa-yang-dimaksud-dengan-closure-di-php, BELAJAR" />
+    <meta property="og:site_name" content="BELAJAR" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Jelaskan Apa Yang Dimaksud Dengan Closure Di Php - BELAJAR" />
+    <meta name="twitter:description" content="Jelaskan Apa Yang Dimaksud Dengan Closure Di Php, , , , , , , 0, , , , , , 0, jelaskan-apa-yang-dimaksud-dengan-closure-di-php, BELAJAR" />
+    <link rel='stylesheet' id='generate-style-css' href='https://sumberskripsi.github.io/css/main.min.css'?ver=3.2.4'
+        media='all' />
+    <link rel='stylesheet' id='ez-toc-css' href='https://sumberskripsi.github.io/css/screen.min.css'?ver=2.0.40' media='all' />
+    <style id='generate-style-inline-css'>
+        body {
+            background-color: #f7f7f7;
+            color: #222222;
+        }
+
+        a {
+            color: #1e73be;
+        }
+
+        a:hover,
+        a:focus,
+        a:active {
+            color: #000000;
+        }
+
+        .wp-block-group__inner-container {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .generate-back-to-top {
+            font-size: 20px;
+            border-radius: 3px;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            line-height: 40px;
+            width: 40px;
+            text-align: center;
+            z-index: 10;
+            transition: opacity 300ms ease-in-out;
+            opacity: 0.1;
+            transform: translateY(1000px);
+        }
+
+        .generate-back-to-top__show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .navigation-search {
+            position: absolute;
+            left: -99999px;
+            pointer-events: none;
+            visibility: hidden;
+            z-index: 20;
+            width: 100%;
+            top: 0;
+            transition: opacity 100ms ease-in-out;
+            opacity: 0;
+        }
+
+        .navigation-search.nav-search-active {
+            left: 0;
+            right: 0;
+            pointer-events: auto;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .navigation-search input[type="search"] {
+            outline: 0;
+            border: 0;
+            vertical-align: bottom;
+            line-height: 1;
+            opacity: 0.9;
+            width: 100%;
+            z-index: 20;
+            border-radius: 0;
+            -webkit-appearance: none;
+            height: 60px;
+        }
+
+        .navigation-search input::-ms-clear {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-ms-reveal {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .navigation-search input::-webkit-search-decoration,
+        .navigation-search input::-webkit-search-cancel-button,
+        .navigation-search input::-webkit-search-results-button,
+        .navigation-search input::-webkit-search-results-decoration {
+            display: none;
+        }
+
+        .gen-sidebar-nav .navigation-search {
+            top: auto;
+            bottom: 0;
+        }
+
+        :root {
+            --contrast: #222222;
+            --contrast-2: #575760;
+            --contrast-3: #b2b2be;
+            --base: #f0f0f0;
+            --base-2: #f7f8f9;
+            --base-3: #ffffff;
+            --accent: #1e73be;
+        }
+
+        .has-contrast-color {
+            color: var(--contrast);
+        }
+
+        .has-contrast-background-color {
+            background-color: var(--contrast);
+        }
+
+        .has-contrast-2-color {
+            color: var(--contrast-2);
+        }
+
+        .has-contrast-2-background-color {
+            background-color: var(--contrast-2);
+        }
+
+        .has-contrast-3-color {
+            color: var(--contrast-3);
+        }
+
+        .has-contrast-3-background-color {
+            background-color: var(--contrast-3);
+        }
+
+        .has-base-color {
+            color: var(--base);
+        }
+
+        .has-base-background-color {
+            background-color: var(--base);
+        }
+
+        .has-base-2-color {
+            color: var(--base-2);
+        }
+
+        .has-base-2-background-color {
+            background-color: var(--base-2);
+        }
+
+        .has-base-3-color {
+            color: var(--base-3);
+        }
+
+        .has-base-3-background-color {
+            background-color: var(--base-3);
+        }
+
+        .has-accent-color {
+            color: var(--accent);
+        }
+
+        .has-accent-background-color {
+            background-color: var(--accent);
+        }
+
+        body,
+        button,
+        input,
+        select,
+        textarea {
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+
+        body {
+            line-height: 1.5;
+        }
+
+        .entry-content>[class*="wp-block-"]:not(:last-child) {
+            margin-bottom: 1.5em;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            font-size: 14px;
+        }
+
+        .sidebar .widget,
+        .footer-widgets .widget {
+            font-size: 17px;
+        }
+
+        @media (max-width:768px) {
+            h1 {
+                font-size: 31px;
+            }
+
+            h2 {
+                font-size: 27px;
+            }
+
+            h3 {
+                font-size: 24px;
+            }
+
+            h4 {
+                font-size: 22px;
+            }
+
+            h5 {
+                font-size: 19px;
+            }
+        }
+
+        .top-bar {
+            background-color: #636363;
+            color: #ffffff;
+        }
+
+        .top-bar a {
+            color: #ffffff;
+        }
+
+        .top-bar a:hover {
+            color: #303030;
+        }
+
+        .site-header {
+            background-color: #ffffff;
+        }
+
+        .main-title a,
+        .main-title a:hover {
+            color: #222222;
+        }
+
+        .site-description {
+            color: #757575;
+        }
+
+        .main-navigation,
+        .main-navigation ul ul {
+            background-color: #ed4250;
+        }
+
+        .main-navigation .main-nav ul li a,
+        .main-navigation .menu-toggle,
+        .main-navigation .menu-bar-items {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul li.sfHover:not([class*="current-menu-"])>a,
+        .main-navigation .menu-bar-item:hover>a,
+        .main-navigation .menu-bar-item.sfHover>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        button.menu-toggle:hover,
+        button.menu-toggle:focus {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul li[class*="current-menu-"]>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .navigation-search input[type="search"],
+        .navigation-search input[type="search"]:active,
+        .navigation-search input[type="search"]:focus,
+        .main-navigation .main-nav ul li.search-item.active>a,
+        .main-navigation .menu-bar-items .search-item.active>a {
+            color: #ffffff;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation ul ul {
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li a {
+            color: #ffffff;
+        }
+
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):hover>a,
+        .main-navigation .main-nav ul ul li:not([class*="current-menu-"]):focus>a,
+        .main-navigation .main-nav ul ul li.sfHover:not([class*="current-menu-"])>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .main-navigation .main-nav ul ul li[class*="current-menu-"]>a {
+            color: #fcd9d6;
+            background-color: #c42f2f;
+        }
+
+        .separate-containers .inside-article,
+        .separate-containers .comments-area,
+        .separate-containers .page-header,
+        .one-container .container,
+        .separate-containers .paging-navigation,
+        .inside-page-header {
+            background-color: #ffffff;
+        }
+
+        .entry-title a {
+            color: #222222;
+        }
+
+        .entry-title a:hover {
+            color: #55555e;
+        }
+
+        .entry-meta {
+            color: #595959;
+        }
+
+        .sidebar .widget {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets {
+            background-color: #ffffff;
+        }
+
+        .footer-widgets .widget-title {
+            color: #000000;
+        }
+
+        .site-info {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        .site-info a {
+            color: #ffffff;
+        }
+
+        .site-info a:hover {
+            color: #d3d3d3;
+        }
+
+        .footer-bar .widget_nav_menu .current-menu-item a {
+            color: #d3d3d3;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="url"],
+        input[type="password"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="number"],
+        textarea,
+        select {
+            color: #666666;
+            background-color: #fafafa;
+            border-color: #cccccc;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="url"]:focus,
+        input[type="password"]:focus,
+        input[type="search"]:focus,
+        input[type="tel"]:focus,
+        input[type="number"]:focus,
+        textarea:focus,
+        select:focus {
+            color: #666666;
+            background-color: #ffffff;
+            border-color: #bfbfbf;
+        }
+
+        button,
+        html input[type="button"],
+        input[type="reset"],
+        input[type="submit"],
+        a.button,
+        a.wp-block-button__link:not(.has-background) {
+            color: #ffffff;
+            background-color: #55555e;
+        }
+
+        button:hover,
+        html input[type="button"]:hover,
+        input[type="reset"]:hover,
+        input[type="submit"]:hover,
+        a.button:hover,
+        button:focus,
+        html input[type="button"]:focus,
+        input[type="reset"]:focus,
+        input[type="submit"]:focus,
+        a.button:focus,
+        a.wp-block-button__link:not(.has-background):active,
+        a.wp-block-button__link:not(.has-background):focus,
+        a.wp-block-button__link:not(.has-background):hover {
+            color: #ffffff;
+            background-color: #3f4047;
+        }
+
+        a.generate-back-to-top {
+            background-color: rgba(0, 0, 0, 0.4);
+            color: #ffffff;
+        }
+
+        a.generate-back-to-top:hover,
+        a.generate-back-to-top:focus {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #ffffff;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-bar-item:hover>a,
+            .main-navigation .menu-bar-item.sfHover>a {
+                background: none;
+                color: #ffffff;
+            }
+        }
+
+        .nav-below-header .main-navigation .inside-navigation.grid-container,
+        .nav-above-header .main-navigation .inside-navigation.grid-container {
+            padding: 0px 20px 0px 20px;
+        }
+
+        .site-main .wp-block-group__inner-container {
+            padding: 40px;
+        }
+
+        .separate-containers .paging-navigation {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .entry-content .alignwide,
+        body:not(.no-sidebar) .entry-content .alignfull {
+            margin-left: -40px;
+            width: calc(100% + 80px);
+            max-width: calc(100% + 80px);
+        }
+
+        .rtl .menu-item-has-children .dropdown-menu-toggle {
+            padding-left: 20px;
+        }
+
+        .rtl .main-navigation .main-nav ul li.menu-item-has-children>a {
+            padding-right: 20px;
+        }
+
+        @media (max-width:768px) {
+
+            .separate-containers .inside-article,
+            .separate-containers .comments-area,
+            .separate-containers .page-header,
+            .separate-containers .paging-navigation,
+            .one-container .site-content,
+            .inside-page-header {
+                padding: 30px;
+            }
+
+            .site-main .wp-block-group__inner-container {
+                padding: 30px;
+            }
+
+            .inside-top-bar {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-header {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .widget-area .widget {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .footer-widgets-container {
+                padding-top: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+                padding-left: 30px;
+            }
+
+            .inside-site-info {
+                padding-right: 30px;
+                padding-left: 30px;
+            }
+
+            .entry-content .alignwide,
+            body:not(.no-sidebar) .entry-content .alignfull {
+                margin-left: -30px;
+                width: calc(100% + 60px);
+                max-width: calc(100% + 60px);
+            }
+
+            .one-container .site-main .paging-navigation {
+                margin-bottom: 20px;
+            }
+        }
+
+        /* End cached CSS */
+        .is-right-sidebar {
+            width: 30%;
+        }
+
+        .is-left-sidebar {
+            width: 30%;
+        }
+
+        .site-content .content-area {
+            width: 70%;
+        }
+
+        @media (max-width:768px) {
+
+            .main-navigation .menu-toggle,
+            .sidebar-nav-mobile:not(#sticky-placeholder) {
+                display: block;
+            }
+
+            .main-navigation ul,
+            .gen-sidebar-nav,
+            .main-navigation:not(.slideout-navigation):not(.toggled) .main-nav>ul,
+            .has-inline-mobile-toggle #site-navigation .inside-navigation>*:not(.navigation-search):not(.main-nav) {
+                display: none;
+            }
+
+            .nav-align-right .inside-navigation,
+            .nav-align-center .inside-navigation {
+                justify-content: space-between;
+            }
+        }
+    </style>
+    <link rel="icon" href="https://sumberskripsi.github.io/img/cropped-soalbelajar-32x32.png" sizes="32x32" />
+    <link rel="icon" href="https://sumberskripsi.github.io/img/cropped-soalbelajar-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="https://sumberskripsi.github.io/img/cropped-soalbelajar-180x180.png" />
+    <meta name="msapplication-TileImage" content="https://sumberskripsi.github.io/img/cropped-soalbelajar-270x270.png" />
+</head>
+
+<body
+    class="home blog wp-custom-logo wp-embed-responsive right-sidebar nav-above-header separate-containers nav-search-enabled nav-aligned-center header-aligned-center dropdown-hover"
+    itemtype="https://schema.org/Blog" itemscope>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-dark-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0.49803921568627" />
+                    <feFuncG type="table" tableValues="0 0.49803921568627" />
+                    <feFuncB type="table" tableValues="0 0.49803921568627" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-red">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 0.27843137254902" />
+                    <feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-midnight">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0" />
+                    <feFuncG type="table" tableValues="0 0.64705882352941" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-magenta-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.78039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.94901960784314" />
+                    <feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-green">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.44705882352941 0.4" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-orange">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.098039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.66274509803922" />
+                    <feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><a class="screen-reader-text skip-link" href="#content" title="Langsung ke isi">Langsung ke isi</a>
+    <nav class="main-navigation nav-align-center has-menu-bar-items sub-menu-right" id="site-navigation"
+        aria-label="Utama" itemtype="https://schema.org/SiteNavigationElement" itemscope>
+        <div class="inside-navigation grid-container">
+            <form method="get" class="search-form navigation-search" action="/">
+                <input type="search" class="search-field" value="" name="q" title="Cari" />
+            </form> <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                <span class="gp-icon icon-menu-bars"><svg viewBox="0 0 512 512" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                        <path
+                            d="M0 96c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24z" />
+                    </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        width="1em" height="1em">
+                        <path
+                            d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                    </svg></span><span class="mobile-menu">Menu</span> </button>
+            <div id="primary-menu" class="main-nav">
+                <ul id="menu-soal-belajar" class=" menu sf-menu">
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1"><a
+                            href="https://sumberskripsi.github.io">Home</a></li>
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2"><a
+                            href="https://sumberskripsi.github.io/page/dmca.html">DMCA</a></li>
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3"><a
+                            href="https://sumberskripsi.github.io/page/privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+                </ul>
+            </div>
+            <div class="menu-bar-items"><span class="menu-bar-item search-item"><a aria-label="Buka Kolom Pencarian"
+                        href="#"><span class="gp-icon icon-search"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M208 48c-88.366 0-160 71.634-160 160s71.634 160 160 160 160-71.634 160-160S296.366 48 208 48zM0 208C0 93.125 93.125 0 208 0s208 93.125 208 208c0 48.741-16.765 93.566-44.843 129.024l133.826 134.018c9.366 9.379 9.355 24.575-.025 33.941-9.379 9.366-24.575 9.355-33.941-.025L337.238 370.987C301.747 399.167 256.839 416 208 416 93.125 416 0 322.875 0 208z" />
+                            </svg><svg viewBox="0 0 512 512" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                width="1em" height="1em">
+                                <path
+                                    d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+                            </svg></span></a></span></div>
+        </div>
+    </nav>
+    <header class="site-header grid-container" id="masthead" aria-label="Situs"
+        itemtype="https://schema.org/WPHeader" itemscope>
+        <div class="inside-header grid-container">
+            <h1 class="site-logo">
+                <a href="https://sumberskripsi.github.io" rel="home"> BELAJAR</a>
+            </h1>
+        </div>
+    </header>
+
+    <div class="site grid-container container hfeed" id="page">
+        <div class="site-content" id="content">
+            <div class="content-area" id="primary">
+                    <main class="site-main" id="main">
+        <article id="post-1327" class="post-1327 post type-post status-publish format-standard hentry category-info"
+            itemtype="https://schema.org/CreativeWork" itemscope="">
+            <div class="inside-article">
+                <header class="entry-header" aria-label="Konten">
+                    <h1 class="entry-title" itemprop="headline">Jelaskan Apa Yang Dimaksud Dengan Closure Di Php</h1>
+                    <div class="entry-meta">
+                       <span
+                            class="byline">oleh <span class="author vcard" itemprop="author"
+                                itemtype="https://schema.org/Person" itemscope=""><span class="author-name"
+                                    itemprop="name">rofa2084</span></span></span>
+                    </div>
+                </header>
+                <div class="entry-content" itemprop="text">
+                    <div style="text-align: center">
+                        <img src="https://tse1.mm.bing.net/th?q=Jelaskan+Apa+Yang+Dimaksud+Dengan+Closure+Di+Php" alt="Jelaskan Apa Yang Dimaksud Dengan Closure Di Php">
+                    </div>
+                    <p></p>
+                    <p>Penjelasan terminasi menggunakan closure</p>
+                    <div id="ez-toc-container"
+                        class="ez-toc-v2_0_40 counter-hierarchy ez-toc-counter ez-toc-light-blue ez-toc-container-direction">
+                        <div class="ez-toc-title-container">
+                            <p class="ez-toc-title">Daftar Isi</p>
+                            <span class="ez-toc-title-toggle"><a href="#"
+                                    class="ez-toc-pull-right ez-toc-btn ez-toc-btn-xs ez-toc-btn-default ez-toc-toggle"
+                                    area-label="ez-toc-toggle-icon-1"><label for="item-63b392361c4a0"
+                                        aria-label="Table of Content"><span
+                                            style="display: flex;align-items: center;width: 35px;height: 30px;justify-content: center;direction:ltr;"><svg
+                                                style="fill: #999;color:#999" xmlns="http://www.w3.org/2000/svg"
+                                                class="list-377408" width="20px" height="20px" viewBox="0 0 24 24"
+                                                fill="none">
+                                                <path
+                                                    d="M6 6H4v2h2V6zm14 0H8v2h12V6zM4 11h2v2H4v-2zm16 0H8v2h12v-2zM4 16h2v2H4v-2zm16 0H8v2h12v-2z"
+                                                    fill="currentColor"></path>
+                                            </svg><svg style="fill: #999;color:#999" class="arrow-unsorted-368013"
+                                                xmlns="http://www.w3.org/2000/svg" width="10px" height="10px"
+                                                viewBox="0 0 24 24" version="1.2" baseProfile="tiny">
+                                                <path
+                                                    d="M18.2 9.3l-6.2-6.3-6.2 6.3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3h11c.3 0 .5-.1.7-.3.2-.2.3-.5.3-.7s-.1-.5-.3-.7zM5.8 14.7l6.2 6.3 6.2-6.3c.2-.2.3-.5.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3h-11c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7s.1.5.3.7z">
+                                                </path>
+                                            </svg></span></label><input type="checkbox" id="item-63b392361c4a0"></a></span>
+                        </div>
+                        <nav>
+                            <ul class="ez-toc-list ez-toc-list-level-1 ">
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#penjelasan-terminasi-menggunakan-closure">1.
+                                            Penjelasan terminasi menggunakan closure</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-yang-dimaksud-dengan-bahasa-c-pada-php-jelaskan">2.
+                                            Apa yang dimaksud dengan bahasa c pada php ? Jelaskan </a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-yang-dimaksud-dengan-php">3.
+                                            apa yang dimaksud dengan php?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-yang-dimaksud-fungsi-pada-bahasa-pemograman-php">4.
+                                            apa yang dimaksud fungsi pada bahasa pemograman php?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-yang-dimaksud-dengan-php">5.
+                                            Apa yang dimaksud dengan php?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-yang-di-maksud-scipt-php">6.
+                                            apa yang di maksud scipt php</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#fungsi-foreach-dalam-phpjelaskan">7.
+                                            fungsi foreach dalam php,jelaskan??</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#mohon-dijawab-ya-yg-ngerti-koding-maksud-operator-samadengan-dalam-persyaratan-while-itu-apa-dan-maksud-tanda-dalam-php">8.
+                                            Mohon dijawab ya yg ngerti koding, maksud operator samadengan dalam persyaratan while itu apa? dan maksud tanda : dalam php?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-itu-php-dan-apa-kegunaan-php">9.
+                                            apa itu PHP ? 
+dan apa kegunaan PHP ?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#what-is-the-maning-of-closure">10.
+                                            What is the maning of closure</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#what-about-the-closure-pleace-explain">11.
+                                            what about the closure? pleace explain</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-yang-dimaksud-cpu-dan-gpuapa-yang-dimaksud-c-c-python-dan-php%e2%80%8b">12.
+                                            Apa yang dimaksud CPU Dan GPU?Apa Yang Dimaksud c+ ,c++ , python dan PHP?​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-macam-macam-perintah-dasar-php%e2%80%8b">13.
+                                            Jelaskan macam-macam Perintah dasar PHP​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-yang-dimaksud-dengan-variabel-dalam-php">14.
+                                            Apa yang dimaksud dengan variabel dalam PHP?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#soal-kelinci-termasuk-hewan-kosmopolit-jelaskan-maksudnya-notes-%e2%80%a2-nggak-boleh-asal-asalan-%e2%80%a2-kalau-jawaban-yang-benar-aku-akan-follow-no-php-%e2%80%8b">15.
+                                            SOAL :Kelinci termasuk hewan kosmopolit?. Jelaskan maksudnya !Notes :• nggak boleh asal-asalan !• kalau jawaban yang benar aku akan follow no PHP !​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-yang-di-maksud-dengan-variabel-dalam-php">16.
+                                            apa yang di maksud dengan variabel dalam php</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-mengapa-php-digolongkan-sebagai-bahasa-pemrograman-server-side-scripting">17.
+                                            Jelaskan mengapa PHP digolongkan sebagai bahasa pemrograman server side scripting?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-yang-dimaksud-dengan-php">18.
+                                            apa yang dimaksud dengan php</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-hubungan-antara-php-dan-mysql%e2%80%8b">19.
+                                            jelaskan hubungan antara php dan mysql​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#diamana-letak-closure-dalam-personal-letter%e2%80%8b">20.
+                                            diamana letak closure dalam personal letter​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-yang-dimaksud-dengan-koneksi-dalam-php">21.
+                                            apa yang dimaksud dengan koneksi dalam php?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-yang-di-maksud-php-dalam-ilmu-plajaran-komputer">22.
+                                            apa yang di maksud PHP dalam ilmu plajaran komputer ?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jabarkan-keterkaitan-antara-a-teori-proximityb-teori-closuredengan-teori-vocal-point">23.
+                                            Jabarkan keterkaitan antara :
+a) Teori Proximity
+b) Teori Closure
+dengan teori vocal point.</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#saya-mau-tanya-sebenernya-apa-sih-maksud-daria-phpb-htmlc-mysqlbiasanya-ketiga-hal-tersebut-dipakai-buat-apamohon-penjelasan-terima-kasih">24.
+                                            Saya mau tanya, sebenernya apa sih maksud dari:
+a. PHP
+b. HTML
+c. Mysql
+Biasanya ketiga hal tersebut dipakai buat apa?
+Mohon penjelasan, terima kasih.</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#sebutkan-dan-jelaskan-mengenai-operator-logika-dalam-php">25.
+                                            sebutkan dan jelaskan mengenai operator logika dalam PHP</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#mengapa-suatu-file-dalam-dreamweaver-harus-berekstention-php-jelaskan">26.
+                                            mengapa suatu file dalam dreamweaver harus berekstention PHP? Jelaskan!</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-kepanjangan-php-dan-jelaskan-apa-ulusan-nya">27.
+                                            apa kepanjangan php dan jelaskan apa ulusan nya </a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-ada-berapa-versi-php2-apakah-php-adalah-sebuah-bahasa-pemrograman-oop-jelaskan-pendapat-kalian">28.
+                                            1. Ada berapa versi PHP?
+2. Apakah PHP adalah sebuah bahasa pemrograman OOP? Jelaskan pendapat kalian.</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-perbedaan-php-mysql-dengan-php-mysqli">29.
+                                            apa perbedaan php mysql dengan php mysqli ?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-yang-dimaksud-dengan-php">30.
+                                            apa yang dimaksud dengan php</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-perbedaan-antara-html-dan-php">31.
+                                            Jelaskan perbedaan antara HTML dan PHP</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#1-place-where-the-letter-is-written-isa-dateb-contentc-addressd-closure2-where-the-letter-is-written-is-calleda-addressb-datec-closured-salutation">32.
+                                            1. Place where the letter is written is?
+A. Date
+B. Content
+C. Address
+D. Closure
+2. Where the letter is written is called?
+A. Address
+B. Date
+C. Closure
+D. Salutation</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#mengapa-suatu-file-dalam-dreamweaver-harus-berekstention-php-jelaskan">33.
+                                            mengapa suatu file dalam dreamweaver harus berekstention PHP? Jelaskan!</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#penjumlahan-pada-php-kolom-database-dengan-php">34.
+                                            penjumlahan pada php kolom database dengan php</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-yg-di-maksud-dengan-pemograman-php%e2%80%8b">35.
+                                            apa yg  di maksud dengan pemograman php​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#bagamana-cara-membuat-php-dan-apa-fungsi-php">36.
+                                            bagamana cara membuat php dan apa fungsi php</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#komponen-apasajakah-yang-diperlukan-dalam-menjalankan-php-sebutkan-dan-jelaskan%e2%80%8b">37.
+                                            komponen apasajakah yang diperlukan dalam menjalankan php? sebutkan dan jelaskan​</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#jelaskan-bagaimana-cara-mengatasi-file-php-yang-tidak-terbaca-di-xampp">38.
+                                            Jelaskan bagaimana cara mengatasi file php yang tidak terbaca di xampp ?</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#apa-yang-dimaksud-dengan-php">39.
+                                            apa yang dimaksud dengan php</a>
+                                    </li>
+                                                                    <li class="ez-toc-page-1 ez-toc-heading-level-2">
+                                        <a class="ez-toc-link ez-toc-heading-1"
+                                            href="#sebutkan-dan-jelaskan-5-tipe-data-dalam-php">40.
+                                            sebutkan dan jelaskan 5 tipe data dalam php ?</a>
+                                    </li>
+                                                            </ul>
+                        </nav>
+                    </div>
+                                            <h2 class="ez-toc-section" id="penjelasan-terminasi-menggunakan-closure">
+                            1. Penjelasan terminasi menggunakan closure</h2><br />
+                        closure adalah fungsi dalam yg terdapat dalam fungsi.fungsi ini dalam mengambil variabel dr luar lingkungannya<br />
+                                            <h2 class="ez-toc-section" id="apa-yang-dimaksud-dengan-bahasa-c-pada-php-jelaskan">
+                            2. Apa yang dimaksud dengan bahasa c pada php ? Jelaskan </h2><br />
+                        Bahasa pemrograman C merupakan salah satu bahasa pemrograman komputer. Dibuat pada tahun 1972 oleh Dennis Ritchie untuk Sistem Operasi Unix di Bell Telephone Laboratories. Meskipun C dibuat untuk memprogram sistem dan jaringan komputer namun bahasa ini juga sering digunakan dalam mengembangkan software aplikasi.<br />
+                                            <h2 class="ez-toc-section" id="apa-yang-dimaksud-dengan-php">
+                            3. apa yang dimaksud dengan php?</h2><br />
+                        pemberi harapan palsu<br /><br />(mungkin)<br />pemberi harapan palsu<br /><br /><br />
+                                            <h2 class="ez-toc-section" id="apa-yang-dimaksud-fungsi-pada-bahasa-pemograman-php">
+                            4. apa yang dimaksud fungsi pada bahasa pemograman php?</h2><br />
+                        <strong>Function </strong>(fungsi)<strong> </strong>adalah kode program yang dirancang untuk menyelesaikan sebuah tugas tertentu, dan merupakan bagian dari program utama. <br /><br />Biasanya function dibuat sekali dan dapat dipanggil berkali-kali dalam mengerjakan program. Dari pada membuat perintah terus-menerus (Perintah yang sama) lebih baik membuat 1 function dan dipanggil jika dibutuhkan.<br /><br />Semoga membantu.<br />
+                                            <h2 class="ez-toc-section" id="apa-yang-dimaksud-dengan-php">
+                            5. Apa yang dimaksud dengan php?</h2><br />
+                        PHP adalah bahasa pemrograman yang digunakan secara luas untuk penanganan pembuatan dan pengembangan sebuah situs web dan bisa digunakan bersamaan dengan HTML<br />PHP adalah salah satu bahasa pemrograman tingkat tinggi. Kepanjangan dari PHP adalah Hypertext Pre-processor.<br /><br />PHP banyak digunakan untuk pembuatan website dinamis yang membutuhkan update data setiap saat, dan biasanya juga digabungkan dengan bahasa pemrograman SQL.<br /><br />
+                                            <h2 class="ez-toc-section" id="apa-yang-di-maksud-scipt-php">
+                            6. apa yang di maksud scipt php</h2><br />
+                        program komputer berbasis web yang ditulis menggunakan bahasa pemrograman php.<br />
+                                            <h2 class="ez-toc-section" id="fungsi-foreach-dalam-phpjelaskan">
+                            7. fungsi foreach dalam php,jelaskan??</h2><br />
+                        klo menurut aku si begini aku kurang tau si<br /><br />Fungsi dari Foreach adalah digunakan untuk perulangan yang datanya dalam bentuk array.. terkadang memiliki data dalam bentuk array yg harus kita dengan menggunakan perulangan for. dengan membuat variabel counter. tetapi dengan menggunakan foreach  kita tidak perlu lagi menampilkan data dari array dengan variabel counter seperti di perulangan for.<br /><br />begitu si yg aku tau mmaf klo salah<br /> <br /><br />
+                                            <h2 class="ez-toc-section" id="mohon-dijawab-ya-yg-ngerti-koding-maksud-operator-samadengan-dalam-persyaratan-while-itu-apa-dan-maksud-tanda-dalam-php">
+                            8. Mohon dijawab ya yg ngerti koding, maksud operator samadengan dalam persyaratan while itu apa? dan maksud tanda : dalam php?</h2><br />
+                        <p>while itu sejenis loop yang meng-loop kode terus menerus asalkan kondisinya benar </p><p>contoh </p><p>===================================</p><p>&lt;?php </p><p>$x = 1; </p><br /><p>while($x = 5) {</p><p>    echo "The number is: $x &lt;br&gt;";</p><p>    $x++;</p><p>} </p><p>?&gt;</p><p>^kode diatas set variable $x = 1, dan loopnya berjalan sampai variable nya  sama degan 5 dan value $x akan naik 1 </p><br /><p>jadi artinya di kode lu</p><p>dia akan mengeloop sampai variable row lu sama dengan variable result </p><p>persyaratan while itu yang penting code conditions nya benar </p><br />
+                                            <h2 class="ez-toc-section" id="apa-itu-php-dan-apa-kegunaan-php">
+                            9. apa itu PHP ? 
+dan apa kegunaan PHP ?</h2><br />
+                        PHP itu pemberi harapan palsu<br />gunaya untuk selingkuh<br />
+                                            <h2 class="ez-toc-section" id="what-is-the-maning-of-closure">
+                            10. What is the maning of closure</h2><br />
+                        Pentutupan/pengakhiran kalau tidak salah<br />
+                                            <h2 class="ez-toc-section" id="what-about-the-closure-pleace-explain">
+                            11. what about the closure? pleace explain</h2><br />
+                        Closure or need for closure (NFC) (used interchangeably with need for cognitive closure
+ (NFCC)) are psychological terms that describe an individual's desire 
+for a firm answer to a question and an aversion toward ambiguity. The 
+term "need" denotes a motivated tendency to seek out information.[1]<br />closure adalah p penutupan atau pengakhiran<br />
+                                            <h2 class="ez-toc-section" id="apa-yang-dimaksud-cpu-dan-gpuapa-yang-dimaksud-c-c-python-dan-php%e2%80%8b">
+                            12. Apa yang dimaksud CPU Dan GPU?Apa Yang Dimaksud c+ ,c++ , python dan PHP?​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p><strong>CPU</strong> komputer yang beredar saat ini dipasaran adalah Intel dan AMD.</p><p> <strong>GPU</strong> merupakan singkatan dari Graphics Processing Unit adalah perangkat keras yang difungsikan sebagai pemroses grafis dan menampilkan pada layar monitor.</p><p></p><p><strong>C++</strong> adalah bahasa pemrograman komputer yang dibuat oleh Bjarne Stroustrup, yang merupakan perkembangan dari bahasa C dikembangkan di Bell Labs (Dennis Ritchie).</p><p><strong>Python</strong> merupakan bahasa pemrograman yang dapat bekerja di sisi server dan diberbagai platform. Sedangkan, PHP juga merupakan bahasa pemrograman yang bekerja di sisi server dan digunakan untuk membangun aplikasi website. </p><p></p><br />
+                                            <h2 class="ez-toc-section" id="jelaskan-macam-macam-perintah-dasar-php%e2%80%8b">
+                            13. Jelaskan macam-macam Perintah dasar PHP​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Berikut struktur dasar kode PHP :</p><p></p><p>&lt;?php</p><p></p><p>Script php</p><p></p><p>?&gt;</p><p></p><p></p><p>Atau dapat juga ditulis :</p><p></p><p></p><p>&lt;?</p><p></p><p>Script PHP</p><p></p><p>?&gt;</p><p></p><p></p><p>Kode PHP dapat digabungkan dengan HTML seperti pada contoh berikut ini :</p><p></p><p></p><p>&lt;html&gt;</p><p></p><p> &lt;body&gt;</p><p></p><p>  &lt;?php</p><p></p><p>   Echo  "ini adalah PHP";</p><p></p><p>  ?&gt;</p><p></p><p> &lt;/body&gt;</p><p></p><p>&lt;/html&gt;</p><p></p><p></p><p></p><p>2. /*…*/</p><p></p><p>Mendefinisikan komentar pada PHP. Tulisan yang berada dalam kode ini tidak akan diakses oleh webserver.</p><p></p><p>Contoh:</p><p></p><p>&lt;?php</p><p></p><p>/* ini merupakan contoh komentar */</p><p></p><p>Echo "ini adalah PHP";</p><p></p><p>?&gt;</p><p></p><p></p><p>3. Variabel</p><p></p><p>Penulisan variabel dalam PHP diawali dengan symbol $.</p><p></p><p>Syntax dasar</p><p></p><p>$nama_variabel = value;</p><p></p><p></p><p>Contohnya:</p><p></p><p>&lt;?php</p><p></p><p>$teks="ini adalah PHP!";</p><p></p><p>$angka=10;</p><p></p><p>?&gt;</p><p></p><p></p><p>4. if…else</p><p></p><p>Merupakan statement kondisi yang digunakan untuk menentukan aksi yang akan dilakukan pada kondisi tertentu. PHP memiliki 4 jenis statemen kondisi, yaitu :</p><p></p><p>If – digunakan untuk menjalankan kode-kode berikutnya hanya jika kondisi bernilai benar (true).</p><p></p><p>Syntax dasar</p><p></p><p>If (condition) kode yang akan dijalankan ketika kondisi bernilai benar;</p><p></p><p></p><p>Contoh:</p><p></p><p></p><p>&lt;?php</p><p></p><p>$t=date("T");</p><p></p><p>If ($t=="Sabtu") ;</p><p></p><p>Echo "Selamat Liburan broo..";</p><p></p><p>?&gt;</p><p></p><p></p><p>If…else – digunakan untuk menjalankan kode-kode berikutnya jika kondisi bernilai benar (true) dan akan menjalankan kode-kode yang lain jika kondisi bernilai salah (false).</p><p></p><p>Syntax dasar:</p><p></p><p>If (condition) kode yang akan dijalankan ketika kondisi bernilai benar;</p><p></p><p>Else</p><p></p><p>Kode yang akan dijalankan ketika kondisi bernilai salah;</p><p></p><p></p><p>Contoh:</p><p></p><p>&lt;?php</p><p></p><p>$t=date("T");</p><p></p><p>If ($t=="Sabtu")</p><p></p><p>Echo "Selamat Liburan broo..";</p><p></p><p>Else</p><p></p><p>Echo "Hari yang cerah sekali";</p><p></p><p>?&gt;</p><p></p><p></p><p>If..else – digunakan untuk memilih salah satu dari beberapa blok kode yang akan dijalankan.</p><p></p><p>Syntax dasar:</p><p></p><p>If (condition) kode yang akan dijalankan ketika kondisi bernilai benar;</p><p></p><p>Elseif (condition) kode yang akan dijalankan ketika kondisi berikutnya bernilai benar;</p><p></p><p>Else</p><p></p><p>Kode yang akan dijalankan ketika kondisi benilai slaah;</p><p></p><p></p><p>Contoh:</p><p></p><p>&lt;?php</p><p></p><p>$t=date("T");</p><p></p><p>If ($t=="Sabtu");</p><p></p><p>  Else "Selamat liburan coyy..";</p><p></p><p>Elseif ($t=="Senin");</p><p></p><p>Echo "Senin Ceria";</p><p></p><p>Else</p><p></p><p>Echo "Hari yang menyenangkan";</p><p></p><p>?&gt;</p><p></p><p></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="apa-yang-dimaksud-dengan-variabel-dalam-php">
+                            14. Apa yang dimaksud dengan variabel dalam PHP?</h2><br />
+                        Dalam pemograman, variabel adalah suatu lokasi penyimpanan 
+(di dalam memori komputer) yang berisikan nilai atau informasi yang 
+nilainya tidak diketahui maupun telah diketahui .
+Dalam defenisi bebasnya, variabel adalah kode program yang digunakan untuk menampung nilai tertentu. Nilai yang disimpan di dalam variabel selanjutnya dapat dipindahkan ke dalam database, atau ditampilkan kembali ke pengguna.
+Nilai dari variabel dapat di isi dengan informasi yang diinginkan dan dapat dirubah nilainya pada saat kode program sedang berjalan. Sebuah variabel memiliki nama yang digunakan untuk mengakses nilai dari variabel itu. Jika anda memiliki pengetahuan dasar tentang bahasa pemograman, tentunya tidak asing dengan istilah variabel.
+Sama seperti variabel dalam bahasa pemograman lainnya, 
+variabel dalam PHP digunakan untuk menampung nilai inputan dari user, 
+atau nilai yang kita definisikan sendiri. Namun PHP memiliki beberapa 
+aturan tentang cara penggunaan dan penulisan variabel.<br />Variable sering dijumpai dalam bahasa pemograman variable ini <strong>digunakan 
+untuk menyimpan data yang bersifat sementara baik jenis string, integer,
+ array dll</strong>. Variable dalam script PHP dinyatakan dengan tanda $ didepan 
+nama variable.<br /><br />
+                                            <h2 class="ez-toc-section" id="soal-kelinci-termasuk-hewan-kosmopolit-jelaskan-maksudnya-notes-%e2%80%a2-nggak-boleh-asal-asalan-%e2%80%a2-kalau-jawaban-yang-benar-aku-akan-follow-no-php-%e2%80%8b">
+                            15. SOAL :Kelinci termasuk hewan kosmopolit?. Jelaskan maksudnya !Notes :• nggak boleh asal-asalan !• kalau jawaban yang benar aku akan follow no PHP !​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Hewan Kosmopolit adalah hewan yang penyebaran nya luas dan banyak ditemukan contoh nya seperti kucing, burung</p><p><strong>Penjelasan:</strong></p><p>maaf kalau salah</p><p>itu doang yang ku tahu</p><br />
+                                            <h2 class="ez-toc-section" id="apa-yang-di-maksud-dengan-variabel-dalam-php">
+                            16. apa yang di maksud dengan variabel dalam php</h2><br />
+                        kode program yang digunakan untuk menampung nilai tertentuVariable sering dijumpai dalam bahasa pemograman variable ini <strong>digunakan 
+untuk menyimpan data yang bersifat sementara baik jenis string, integer,
+ array dll</strong>. Variable dalam script PHP dinyatakan dengan tanda $ didepan 
+nama variable.<br /><br />
+                                            <h2 class="ez-toc-section" id="jelaskan-mengapa-php-digolongkan-sebagai-bahasa-pemrograman-server-side-scripting">
+                            17. Jelaskan mengapa PHP digolongkan sebagai bahasa pemrograman server side scripting?</h2><br />
+                        PHP disebut bahasa pemrograman server side karena PHP diproses pada komputer server. Jadi biasa PHP disisipkan di HTML<br />
+                                            <h2 class="ez-toc-section" id="apa-yang-dimaksud-dengan-php">
+                            18. apa yang dimaksud dengan php</h2><br />
+                        PHP adalah singkatan dari "PHP: Hypertext Prepocessor", yaitu bahasa pemrograman yang digunakan secara luas untuk penanganan pembuatan dan pengembangan sebuah situs web dan bisa digunakan bersamaan dengan HTML.<br />
+                                            <h2 class="ez-toc-section" id="jelaskan-hubungan-antara-php-dan-mysql%e2%80%8b">
+                            19. jelaskan hubungan antara php dan mysql​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>sama" untk pemrograman</p><br />
+                                            <h2 class="ez-toc-section" id="diamana-letak-closure-dalam-personal-letter%e2%80%8b">
+                            20. diamana letak closure dalam personal letter​</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Jadi, letak closure dalam personal letter berada di akhir kalimat.</p><p>Contoh : Thank you for everything.</p><br />
+                                            <h2 class="ez-toc-section" id="apa-yang-dimaksud-dengan-koneksi-dalam-php">
+                            21. apa yang dimaksud dengan koneksi dalam php?</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>maaf kalau salah yaaaaaaaaaa</p><p></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="apa-yang-di-maksud-php-dalam-ilmu-plajaran-komputer">
+                            22. apa yang di maksud PHP dalam ilmu plajaran komputer ?</h2><br />
+                        adalah bahasa skrip yang dapat ditanamkan atau disisipkan ke dalamHTML. PHP banyak dipakai untuk memrogram situs web dinamis. PHP dapat digunakan untuk membangun sebuah CMS.PHP: Hypertext Preprocessor[1] adalah bahasa skrip yang dapat ditanamkan atau disisipkan ke dalam HTML.[2][3]PHP banyak dipakai untuk memrogram situs web dinamis. PHP dapat digunakan untuk membangun sebuah CMS ( dari wikipedia ) <br />
+                                            <h2 class="ez-toc-section" id="jabarkan-keterkaitan-antara-a-teori-proximityb-teori-closuredengan-teori-vocal-point">
+                            23. Jabarkan keterkaitan antara :
+a) Teori Proximity
+b) Teori Closure
+dengan teori vocal point.</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Vocal Point = Titik fokus kita pada sebuah gambar</p><p></p><p>Proximity : Kedekatan sebuah obyek sehingga terbentuk obyek yang baru</p><p></p><p>Closure : Kemiripan pada sebuah obyek meskipun gambar yang ditampilkan tidak penuh</p><p></p><p>A.Kita tahu kalau logo pada gambar  adalah logo unilever dimana yang pertama kali kita lihat adalah huruf U selanjutnya adalah kita lihat kalau obyek yang ada itu tersusun antara obyek lain sehingga menjadi satu obyek yang baru</p><p></p><p></p><p>B. Kita tahu kalau logo WWF adalah panda. Padahal gambar pandanya gak penuh. Vocal pointnya adalah kita melihat gambar tersebut dan sudah tau artinya meskipun gambar yg ditampilkan tidaklah penuh</p><br />
+                                            <h2 class="ez-toc-section" id="saya-mau-tanya-sebenernya-apa-sih-maksud-daria-phpb-htmlc-mysqlbiasanya-ketiga-hal-tersebut-dipakai-buat-apamohon-penjelasan-terima-kasih">
+                            24. Saya mau tanya, sebenernya apa sih maksud dari:
+a. PHP
+b. HTML
+c. Mysql
+Biasanya ketiga hal tersebut dipakai buat apa?
+Mohon penjelasan, terima kasih.</h2><br />
+                        <p><strong>Penjelasan:</strong></p><p>1.HTML</p><p>HTML adalah, (HyperText Markup Language) sebuah bahasa standar yang digunakan oleh browser Internet untuk membuat halaman dan dokumen pada sebuah Web yang kemudian dapat diakses dan dibaca layaknya sebuah artikel. HTMLjuga dapat digunakan sebagai link link antara file-file dalam situs atau dalam komputer dengan menggunakan localhost, atau link yang menghubungkan antar situs dalam dunia internet.</p><p></p><p>*)PHP merupakan bahasa pemrograman yang dapat digunakan untuk membuat skrip yang lebih interaktif. Skrip ini kemudian akan diolah dalam web server yang hasilnya dapat dilihat dalam bentuk HTML. PHP memungkinkan untuk membuat situs yang lebih interaktif dan lebih mudah untuk dioperasikan. </p><p></p><p>*) MySQL merupakan bahasa pemrograman database terbuka. Yang mana memungkinkan untuk bisa membuat, merubah, dan mengakses beberapa database sekaligus dalam server. Kombinasi keduanya biasanya digunakan untuk membuat berbagai macam Website.</p><p></p><p>Fungsi PHP, Php sendiri berfungsi sebagai pemerosesan data-data yang nantinya akan saling terhubung atau berhubungan dengan database atau tidak.</p><p>Secara singkat nya PHP adalah server side language artinya kode PHP akan dieksekusi di server dulu baru kemudian hasilnya akan ditampilkan di layar client.</p><p></p><p></p><p></p><br />
+                                            <h2 class="ez-toc-section" id="sebutkan-dan-jelaskan-mengenai-operator-logika-dalam-php">
+                            25. sebutkan dan jelaskan mengenai operator logika dalam PHP</h2><br />
+                        Operator logika digunakan untuk membandingkan 2 kondisi logika yaitu logika benar/true dan logika salah/false. operator logika sering digunakan untuk kondisi if atau untuk keluar dari proses perulangan (looping)<br /><br />
+                                            <h2 class="ez-toc-section" id="mengapa-suatu-file-dalam-dreamweaver-harus-berekstention-php-jelaskan">
+                            26. mengapa suatu file dalam dreamweaver harus berekstention PHP? Jelaskan!</h2><br />
+                        Karena dalam penamaan file dreamweaver harus menggunakan (.php) supaya dapat berekstensi dengan .php tersebut.<br />Semoga Membantu dan Terima KasihPertama, anda diharuskan mempunyai software xampp, software ini berguna untuk menyimpan file php yang telah kita buat nanti, jika anda belum mempunyai software tersebut silahkan download disini<br /><br />Kedua, install software xampp tersebut, caranya gampang, tinggal next,next aja..atau anda cari sendiri di Google<br /><br />Ketiga, setelah meinstall software tersebut, anda buka text editor anda, seperti Notepad++, Adobe Dreamweaver, dll.<br /><br />Keempat, silahkan anda ketikkan syntax php yang ingin anda praktekin, seperti syntax dibawah ini<br />
+                                            <h2 class="ez-toc-section" id="apa-kepanjangan-php-dan-jelaskan-apa-ulusan-nya">
+                            27. apa kepanjangan php dan jelaskan apa ulusan nya </h2><br />
+                        pemberi harapan palsu..<br />
+                                            <h2 class="ez-toc-section" id="1-ada-berapa-versi-php2-apakah-php-adalah-sebuah-bahasa-pemrograman-oop-jelaskan-pendapat-kalian">
+                            28. 1. Ada berapa versi PHP?
+2. Apakah PHP adalah sebuah bahasa pemrograman OOP? Jelaskan pendapat kalian.</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>1. PHP versi terbaru ada di PHP 7</p><p></p><p>2. PHP bisa menggunakan pemrograman berbasis objek (OOP)</p><p></p><p><strong>Penjelasan:</strong></p><p></p><p>berikut adalah perkembangan versi PHP</p><p></p><p>1. PHP 1.0 </p><p>versi ini adalah versi pertama dari bahasa PHP. dibuat oleh Rasmus Lerdoft pada tahun 1995.</p><p></p><p>2. PHP 2.0</p><p>versi ini dirilis pada November 1997. versi ini merupakan cikal bakal PHP 3.0</p><p></p><p>3. PHP 3.0</p><p>dirilis pada sekitar Juni 1998. PHP ditulis ulang oleh perusahaan bernama Zein. Penulisan ulang ini meliputi pembersihan interpreter PHP. nama versi ini diresmikan menjadi PHP 3.0</p><p></p><p>4. PHP 4.0</p><p>dirilis pada pertengahan tahun 1999 dan pembaruan interpreter. rilis ini dikenal dengan PHP 4.0</p><p></p><p>5. PHP 5.0</p><p>dirilis pada juni 2004. pada versi ini, PHP mulai menambahkan versi OOP</p><p></p><p>6. PHP 6.0</p><p>bisa dibilang versi gagal dari PHP. dirilis sekitar 2005. fitur² yang seharusnya ada di PHP 6.0, dialihkan ke PHP 5.0</p><p></p><p>7. PHP 7.0</p><p>mulai dikembangkan pada tahun 2014. dunia programming dibingungkan oleh update ini, apakah disebut PHP 7 atau PHP 6. setelah melalui voting, akhirnya penamaan versi ini adalah PHP 7.0</p><p></p><p>===============================================</p><p><strong>S</strong><strong>e</strong><strong>m</strong><strong>o</strong><strong>g</strong><strong>a</strong><strong> </strong><strong>M</strong><strong>e</strong><strong>m</strong><strong>b</strong><strong>a</strong><strong>n</strong><strong>t</strong><strong>u</strong></p><p><strong>J</strong><strong>a</strong><strong>d</strong><strong>i</strong><strong>k</strong><strong>a</strong><strong>n</strong><strong> </strong><strong>J</strong><strong>a</strong><strong>w</strong><strong>a</strong><strong>b</strong><strong>a</strong><strong>n</strong><strong> </strong><strong>t</strong><strong>e</strong><strong>r</strong><strong>b</strong><strong>a</strong><strong>i</strong><strong>k</strong><strong> </strong><strong>y</strong><strong>a</strong></p><p><strong>#</strong><strong>B</strong><strong>e</strong><strong>l</strong><strong>a</strong><strong>j</strong><strong>a</strong><strong>r</strong><strong>B</strong><strong>e</strong><strong>r</strong><strong>s</strong><strong>a</strong><strong>m</strong><strong>a</strong><strong>B</strong><strong>r</strong><strong>a</strong><strong>i</strong><strong>n</strong><strong>l</strong><strong>y</strong></p><br />
+                                            <h2 class="ez-toc-section" id="apa-perbedaan-php-mysql-dengan-php-mysqli">
+                            29. apa perbedaan php mysql dengan php mysqli ?</h2><br />
+                        Perbedaan Antara mysql extension Dengan mysqli extension
+<p>Sepanjang tutorial PHP MySQL Part 4 sampai 11 di duniailkom ini, kita menggunakan extension mysql dari PHP untuk mengakses MySQL. Fungsi-fungsi yang kita pelajari tersebut (seperti fungsi mysql_connect, mysql_query, dan mysql_fetch_array)
+ memang sudah tidak disarankan lagi, tetapi saya tetap membahasnya 
+sebagai dasar bagi kita untuk masuk ke extension yang lebih baru: mysqli dan PDO.</p>
+<p>Terhitung dari PHP versi 5.5, extension mysql tidak lagi disarankan penggunaannya dan berstatus deprecated, yang berarti mungkin akan dihapus pada PHP versi berikutnya. Kita disarankan untuk mulai beralih menggunakan mysqli atau PDO. Mari kita bahas tentang mysqli terlebih dahulu.</p>
+<p>Mysqli merupakan kependekan dari MySQL Improved Extension. Seperti yang terlihat dari namanya, extension ini merupakan versi perbaikan dan penambahan dari extension mysql sebelumnya yang umum digunakan. Extension mysqli dibuat untuk mendukung fitur-fitur terbaru dari MySQL Server versi 4.1 keatas.</p><br /><br />
+                                            <h2 class="ez-toc-section" id="apa-yang-dimaksud-dengan-php">
+                            30. apa yang dimaksud dengan php</h2><br />
+                        php adalah suatu bahasa pemrogaman yang berbasis web<br />sngkatan dari Pheripheral Hypertext Preprocessor,, suatu bahasa pmrograman yg dpat disisipkan kdlam HTML, (brbsis web)<br /><br />
+                                            <h2 class="ez-toc-section" id="jelaskan-perbedaan-antara-html-dan-php">
+                            31. Jelaskan perbedaan antara HTML dan PHP</h2><br />
+                        PHP adalah bahasa pemrograman yang dijalankan pada server yang terinstall web server.
+  Artinya semua baris program akan   sepenuhnya dijalankan pada  web 
+server sedangkan yang dikirimkan ke   browser pengguna hanya hasilnya 
+saja.<br /><br />HTML adalah bahasa standard untuk membuat halaman web 
+statis. HTML dapat secara langsung dijalankan dan ditampilkan dengan 
+bantuan browser. <br /><br />
+Secara teori umum diatas, maka perbedaan php dengan javascript atau php dengan html adalah :<br />PHP
+PHP adalah bahasa pemrograman web yang dijalankan di serverPHP digunakan untuk membuat halaman dinamisPHP dapat terhubung dengan databasePHP dapat membuat halaman web dengan HTML maupun javascriptPHP dijalankan oleh server sebelum halaman ditampilkanHTML<br />HTML dapat langsung dijalankan disisi klienHTML digunakan untuk menyusun halaman web statisHTML dapat ditampilkan dalam bentuk objek tabel, tulisan dll<br /><br /><br />PHP adalah bahasa pemograman yang dijalankan pada server yang telah terinstal web server. sedangkan yang dikirim ke browser hanya hasilnya saja. semua baris program dijalankan pada web server<br />Biasanya digunakan untuk web Dinamis<br />dapat terhubung dengan database<br />dapat membuat halaman web dengan HTML dan javascript<br /><br />HTML Bahasa yang sering digunakan untuk membuat web statis, berbeda dengan PHP, HTML dapat dijalankan dan ditampilkan dengan pada Browser. <br /><br />
+                                            <h2 class="ez-toc-section" id="1-place-where-the-letter-is-written-isa-dateb-contentc-addressd-closure2-where-the-letter-is-written-is-calleda-addressb-datec-closured-salutation">
+                            32. 1. Place where the letter is written is?
+A. Date
+B. Content
+C. Address
+D. Closure
+2. Where the letter is written is called?
+A. Address
+B. Date
+C. Closure
+D. Salutation</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>1 C</p><p>2 D</p><p><strong>Penjelasan:</strong></p><p>maaf kalo salah SMG manfaat</p><br />
+                                            <h2 class="ez-toc-section" id="mengapa-suatu-file-dalam-dreamweaver-harus-berekstention-php-jelaskan">
+                            33. mengapa suatu file dalam dreamweaver harus berekstention PHP? Jelaskan!</h2><br />
+                        Ga juga. Dreamweaver itu sofware text editor, dimana fungsingya sama dengan notepad. Tapi dreamweaver kita bisa melihat hasil dari code tyg kita tulis secara langsung tanpa membuka browser.<br /><br />Di dreamweaver bisa membuka seua eksensi file, mulai dari php, html, css, js,txt,dll yg termasuk dlm pemerograman web<br />karena dalam mendesain web menggunakan adobe dreamweaver kerja mirip dengan notepad tetapi dalam penamaan dreamweaver harus berekstensi dengan (.php) tersebut.<br />Semoga Membantu dan Terima Kasih<br />
+                                            <h2 class="ez-toc-section" id="penjumlahan-pada-php-kolom-database-dengan-php">
+                            34. penjumlahan pada php kolom database dengan php</h2><br />
+                        pertanyaan tidak jelas.<br /><br />penjumlahan: <br />$a + $b<br /><br />atau<br /><br />sum($a)<br /><br />atau<br /><br />count($a)<br /><br />$a, $b = variabel penampung<br />
+                                            <h2 class="ez-toc-section" id="apa-yg-di-maksud-dengan-pemograman-php%e2%80%8b">
+                            35. apa yg  di maksud dengan pemograman php​</h2><br />
+                        <p><strong>PHP</strong> adalah singkatan dari "<strong>PHP: Hypertext Prepocessor",</strong> yaitu <strong>bahasa pemrograman</strong> yang digunakan secara luas untuk penanganan pembuatan dan pengembangan sebuah situs web dan bisa digunakan bersamaan dengan HTML. <strong>PHP</strong> diciptakan oleh <strong>Rasmus Lerdorf</strong> pertama kali tahun <strong>1994</strong>.</p><br />
+                                            <h2 class="ez-toc-section" id="bagamana-cara-membuat-php-dan-apa-fungsi-php">
+                            36. bagamana cara membuat php dan apa fungsi php</h2><br />
+                        ya uda kita cueki aja ( Stay cool) <br />Dasar korban php<br />
+                                            <h2 class="ez-toc-section" id="komponen-apasajakah-yang-diperlukan-dalam-menjalankan-php-sebutkan-dan-jelaskan%e2%80%8b">
+                            37. komponen apasajakah yang diperlukan dalam menjalankan php? sebutkan dan jelaskan​</h2><br />
+                        <p>Secara umum, untuk dapat menjalankan skrip PHP hanya membutuhkan hal berikut
+</p><p>
+</p><p>WebServer (Seperti: Apache, Nginx, IIS, dll)
+</p><p>PHP (pastinya)
+</p><p>Meskipun tak wajib, kemungkinan besar kamu juga akan membutuhkan sebuah Database seperti MariaDB atau MySQL sebagai fasilitas penyimpanan data.
+</p><p>Setelah semua tersedia, maka PHP akan melakukan tugasnya yaitu melakukan eksekusi terhadap semua file dengan tipe .php yang telah disimpan dalam direktori tertentu.  </p><p>
+</p><p>Baiklah sobat webmaster, semoga artikel yang singkat ini dapat bermanfaat untuk kita bersama. Pastikan kamu banyak belajar tentang webserver dan memastikan pula PHP telah tertanam didalamnya, karena jika PHP tidak dijalankan oleh webserver maka file .php tidak akan dieksekusi, biasanya justru malah menampilkan sintak PHP yang masih dalam bentuk script. Kita akan belajar lebih dalam tentang webserver dilain kesempatan. </p><p>Singkatnya LAMP (Linux, Apache, Mysql, PHP) , atau WAMP (Windows, Apache, Mysql, PHP). merupakan salah satu paket untuk memenuhi kebutuhan webserver.</p><p></p><p>Linux/Windows : Sebagai <strong>operating system</strong> yang mengendalikan segala aspek dari komputer</p><p></p><p>Apache: Berfungsi sebagai <strong>HTTP Server</strong>, yang bertanggung jawab akan request-response terhadap permintaan client-server dan sebaliknya.</p><p></p><p>Mysql: Merupakan software <strong>Database</strong> yang digunakan untuk menyimpan data-data</p><p></p><p>PHP (Hypertext Preprocessing): Merupakan <strong>Backbone</strong> / Software yang berjalan di background dengan menerima request dan diproses dengan PHP.</p><br />
+                                            <h2 class="ez-toc-section" id="jelaskan-bagaimana-cara-mengatasi-file-php-yang-tidak-terbaca-di-xampp">
+                            38. Jelaskan bagaimana cara mengatasi file php yang tidak terbaca di xampp ?</h2><br />
+                        <p><strong>Jawaban:</strong></p><p>Pastikan project folder berada pada htdocs, cek root path nya ketika memanggil file php barangkali salah root pathnya.</p><br />
+                                            <h2 class="ez-toc-section" id="apa-yang-dimaksud-dengan-php">
+                            39. apa yang dimaksud dengan php</h2><br />
+                        Pemberi harapan palsu<br /><br /><br />Klo gk salahPemberi harapan palsu(php)<br />
+                                            <h2 class="ez-toc-section" id="sebutkan-dan-jelaskan-5-tipe-data-dalam-php">
+                            40. sebutkan dan jelaskan 5 tipe data dalam php ?</h2><br />
+                        Tipe Data boolean<br />Tipe Data Integer<br />Tipe Data Float<br />Tipe Data String<br />Tipe Data Array<br /><br /><br />
+                    
+                </div>
+                <div class="youtubeVideo" style="text-align: center">
+                    <h3>Video Terkait</h3>
+                    <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/ewDRi1BjfIE?controls=0" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"allowfullscreen></iframe>
+                </div>
+                <footer class="entry-meta" aria-label="Meta postingan">
+                    <span class="cat-links"><span class="gp-icon icon-categories"><svg viewBox="0 0 512 512"
+                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em">
+                                <path
+                                    d="M0 112c0-26.51 21.49-48 48-48h110.014a48 48 0 0143.592 27.907l12.349 26.791A16 16 0 00228.486 128H464c26.51 0 48 21.49 48 48v224c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V112z">
+                                </path>
+                            </svg></span><span class="screen-reader-text">Kategori </span>ti</span>
+            </div>
+        </article>
+    </main>
+            </div>
+            <div class="widget-area sidebar is-right-sidebar" id="right-sidebar">
+                <div class="inside-right-sidebar">
+                    <aside id="categories-2" class="widget inner-padding widget_categories">
+                        <h2 class="widget-title">Topik</h2>
+                        <ul>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://sumberskripsi.github.io/contoh-kisi-kisi-pendidikan-agama.html">Contoh Kisi kisi Pendidikan Agama</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://sumberskripsi.github.io/kumpulan-soal-matematika-smp-kelas-8-dan-pembahasannya.html">Kumpulan Soal Matematika Smp Kelas 8 Dan Pembahasannya</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://sumberskripsi.github.io/kumpulan-soal-grammar-dan-jawabannya-pdf.html">Kumpulan Soal Grammar Dan Jawabannya Pdf</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://sumberskripsi.github.io/kumpulan-soal-dan-pembahasan-statistika-dan-probabilitas.html">Kumpulan Soal Dan Pembahasan Statistika Dan Probabilitas</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://sumberskripsi.github.io/jelaskan-apa-yang-dimaksud-dengan-saluran-malpighi.html">Jelaskan Apa Yang Dimaksud Dengan Saluran Malpighi</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://sumberskripsi.github.io/kumpulan-soal-bahasa-indonesia-dan-jawaban-sekolah-tingkat-sd.html">Kumpulan Soal Bahasa Indonesia Dan Jawaban Sekolah Tingkat Sd</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://sumberskripsi.github.io/apa-maksud-dengan.html">Apa Maksud Dengan</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://sumberskripsi.github.io/judul-skripsi-bidang-ekonomi-makro.html">Judul Skripsi Bidang Ekonomi Makro</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://sumberskripsi.github.io/download-kisi-soal-ipa-k13-kelas-8-semester-2.html">Download Kisi Soal Ipa K13 Kelas 8 Semester 2</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://sumberskripsi.github.io/judul-skripsi-game-teknik-informatika-berbasis-android-2015.html">Judul Skripsi Game Teknik Informatika Berbasis Android 2015</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://sumberskripsi.github.io/contoh-judul-tentang-perpajakan-skripsi.html">Contoh Judul Tentang Perpajakan Skripsi</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://sumberskripsi.github.io/download-kumpulan-soal-utul-lengkap.html">Download Kumpulan Soal Utul Lengkap</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://sumberskripsi.github.io/judul-skripsi-yang-tepat-untuk-usaha-jahit-rumahan.html">Judul Skripsi Yang Tepat Untuk Usaha Jahit Rumahan</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://sumberskripsi.github.io/contoh-kisi-kisi-penjas-smk-kelas-x.html">Contoh Kisi kisi Penjas Smk Kelas X</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://sumberskripsi.github.io/jelaskan-apa-yang-dimaksud-ekomodasi.html">Jelaskan Apa Yang Dimaksud Ekomodasi</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://sumberskripsi.github.io/kumpulan-soal-dan-jawaban-mad-dan-waqaf-kelas-8.html">Kumpulan Soal Dan Jawaban Mad Dan Waqaf Kelas 8</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://sumberskripsi.github.io/kumpulan-soal-matematika-tentang-pangkat-dan-akar-kelas-9.html">Kumpulan Soal Matematika Tentang Pangkat Dan Akar Kelas 9</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://sumberskripsi.github.io/kisi-kisi-usbn-smk.html">Kisi Kisi Usbn Smk</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://sumberskripsi.github.io/kisi-kisi-exterior-wood.html">Kisi Kisi Exterior Wood</a>
+                                </li>
+                                                            <li class="cat-item cat-item-23"><a
+                                        href="https://sumberskripsi.github.io/kumpulan-soal-peluang-doc.html">Kumpulan Soal Peluang Doc</a>
+                                </li>
+                                                    </ul>
+
+                    </aside>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="site-footer">
+        <footer class="site-info" aria-label="Situs" itemtype="https://schema.org/WPFooter" itemscope>
+            <div class="inside-site-info grid-container">
+                <div class="copyright-bar">
+                    <span class="copyright">&copy; 2023 <a href="https://sumberskripsi.github.io"
+                            itemprop="url">BELAJAR</a></span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <a title="Gulirkan kembali ke puncak laman" aria-label="Gulirkan kembali ke puncak laman" rel="nofollow"
+        href="#" class="generate-back-to-top" data-scroll-speed="400" data-start-scroll="300">
+        <span class="gp-icon icon-arrow-up"><svg viewBox="0 0 330 512" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill-rule="evenodd"
+                clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
+                <path
+                    d="M305.863 314.916c0 2.266-1.133 4.815-2.832 6.514l-14.157 14.163c-1.699 1.7-3.964 2.832-6.513 2.832-2.265 0-4.813-1.133-6.512-2.832L164.572 224.276 53.295 335.593c-1.699 1.7-4.247 2.832-6.512 2.832-2.265 0-4.814-1.133-6.513-2.832L26.113 321.43c-1.699-1.7-2.831-4.248-2.831-6.514s1.132-4.816 2.831-6.515L158.06 176.408c1.699-1.7 4.247-2.833 6.512-2.833 2.265 0 4.814 1.133 6.513 2.833L303.03 308.4c1.7 1.7 2.832 4.249 2.832 6.515z"
+                    fill-rule="nonzero" />
+            </svg></span>
+    </a>
+    <script id="generate-a11y">
+        ! function() {
+            "use strict";
+            if ("querySelector" in document && "addEventListener" in window) {
+                var e = document.body;
+                e.addEventListener("mousedown", function() {
+                    e.classList.add("using-mouse")
+                }), e.addEventListener("keydown", function() {
+                    e.classList.remove("using-mouse")
+                })
+            }
+        }();
+    </script>
+    <!--[if lte IE 11]>
+<script src='https://sumberskripsi.github.io/js/classList.min.js' ?ver=3.2.4' id='generate-classlist-js'></script>
+<![endif]-->
+    <script id='generate-menu-js-extra'>
+        var generatepressMenu = {
+            "toggleOpenedSubMenus": "1",
+            "openSubMenuLabel": "Buka Submenu",
+            "closeSubMenuLabel": "Tutup submenu"
+        };
+    </script>
+    <script src='https://sumberskripsi.github.io/js/menu.min.js' ?ver=3.2.4' id='generate-menu-js'></script>
+    <script id='generate-navigation-search-js-extra'>
+        var generatepressNavSearch = {
+            "open": "Buka Kolom Pencarian",
+            "close": "Tutup Kolom Pencarian"
+        };
+    </script>
+    <script src='https://sumberskripsi.github.io/js/navigation-search.min.js' ?ver=3.2.4' id='generate-navigation-search-js'></script>
+    <script id='generate-back-to-top-js-extra'>
+        var generatepressBackToTop = {
+            "smooth": "1"
+        };
+    </script>
+    <script src='https://sumberskripsi.github.io/js/back-to-top.min.js' ?ver=3.2.4' id='generate-back-to-top-js'></script>
+<script type='text/javascript' src='//cloudlessmajesty.com/8d/be/84/8dbe84c54b7cc5b78aa0e0a1fbdbae07.js'></script>
+<!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4777688,4,0,0,0,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4777688&101" alt="" border="0"></a></noscript>
+<!-- Histats.com  END  -->
+</body>
+
+</html>
